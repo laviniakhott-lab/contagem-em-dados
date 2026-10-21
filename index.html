@@ -1,250 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contagem em Dados</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-    background:#f4f7fb;
-    color:#222;
-}
-
-header{
-    background:linear-gradient(135deg,#0057b8,#00a859);
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-header h1{
-    font-size:3rem;
-}
-
-header p{
-    margin-top:10px;
-    font-size:1.1rem;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:30px;
-}
-
-.section-title{
-    margin:30px 0 15px;
-    color:#004a99;
-    border-left:6px solid #00a859;
-    padding-left:12px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    padding:20px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#0057b8;
-}
-
-.card p{
-    margin-bottom:15px;
-    font-size:14px;
-    color:#555;
-}
-
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    background:#0057b8;
-    color:white;
-    padding:10px 15px;
-    border-radius:8px;
-}
-
-.btn:hover{
-    background:#003f87;
-}
-
-footer{
-    margin-top:40px;
-    background:#002b55;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-</style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Lavinia Hott">
+  <meta name="theme-color" content="#123f52">
+  <meta name="description" content="Painel público de indicadores verificáveis de Contagem. Explore população, economia, educação, saúde, assistência social e saneamento com fontes e valores verificáveis.">
+  <title>Contagem em dados · Indicadores e fontes verificáveis</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23163e38'/%3E%3Cpath d='M11 29V20m9 9V11m9 18V16' stroke='%23e6ead5' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" type="module"></script>
+  <script src="/events.mjs" type="module"></script>
 </head>
-
 <body>
-
-<header>
-    <h1>📊 Contagem em Dados</h1>
-    <p>Observatório do Trabalho, Emprego e Desenvolvimento de Contagem</p>
-</header>
-
-<div class="container">
-
-    <h2 class="section-title">Mercado de Trabalho</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>SINE</h3>
-            <p>Informações sobre o Sistema Nacional de Emprego.</p>
-            <a class="btn" href="https://portalfat.trabalho.gov.br/wp-content/uploads/2026/06/MIV-SINE-E-CASA-NO-TRABALHADOR-MTE-final-1.pdf" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Novo CAGED</h3>
-            <p>Dados oficiais do mercado de trabalho formal.</p>
-            <a class="btn" href="https://caged.maisemprego.mte.gov.br/portalcaged/paginas/home/home.xhtml" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-    </div>
-
-    <h2 class="section-title">Saúde e Segurança do Trabalho</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>SmartLab SST</h3>
-            <p>Indicadores de saúde e segurança do trabalho.</p>
-            <a class="btn" href="https://smartlabbr.org/sst/localidade/0?dimensao=frequenciaAfastamentos" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>DATASUS</h3>
-            <p>Informações e estatísticas de saúde pública.</p>
-            <a class="btn" href="https://datasus.saude.gov.br/informacoes-de-saude-tabnet/" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-    </div>
-
-    <h2 class="section-title">Economia e Desenvolvimento</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Fundação João Pinheiro</h3>
-            <p>Indicadores municipais de Minas Gerais.</p>
-            <a class="btn" href="https://robin-hood.fjp.mg.gov.br/municipios" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Power BI</h3>
-            <p>Painéis interativos e indicadores.</p>
-            <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiZmVjNzg2ZWEtY2JmYS00ZmUyLWIxNDYtYzJjNDg2YmQzNTFiIiwidCI6IjNlYzkyOTY5LTVhNTEtNGYxOC04YWM5LWVmOThmYmFmYTk3OCJ9" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>ComexStat</h3>
-            <p>Exportações e importações municipais.</p>
-            <a class="btn" href="https://comexstat.mdic.gov.br/pt/municipio" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>IBGE</h3>
-            <p>Cadastro Central de Empresas.</p>
-            <a class="btn" href="https://www.ibge.gov.br/estatisticas/economicas/industria/9016-estatisticas-do-cadastro-central-de-empresas" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-    </div>
-
-    <h2 class="section-title">Assistência Social</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>MDS</h3>
-            <p>Painéis e dados sociais do Ministério do Desenvolvimento Social.</p>
-            <a class="btn" href="https://aplicacoes.mds.gov.br/sagi-paineis/analise_dados_abertos/" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-    </div>
-
-    <h2 class="section-title">Sustentabilidade e Meio Ambiente</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>MapBiomas</h3>
-            <p>Uso da terra e cobertura vegetal.</p>
-            <a class="btn" href="https://brasil.mapbiomas.org/" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>IDSC</h3>
-            <p>Índice de Desenvolvimento Sustentável das Cidades.</p>
-            <a class="btn" href="https://idsc.cidadessustentaveis.org.br/" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-    </div>
-
-    <h2 class="section-title">Educação</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Observatório Itaú</h3>
-            <p>Indicadores educacionais e desenvolvimento social.</p>
-            <a class="btn" href="https://fundacaoitau.org.br/observatorio/dados/paineis-dados/dados-painel-ecic" target="_blank">
-                Acessar
-            </a>
-        </div>
-
-    </div>
-
-</div>
-
-<footer>
-    © 2026 Contagem em Dados | laviniakhott-lab
-</footer>
-
-</body>
+  <svg class="brand-color-filter" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs><filter id="sine-dark-lettering" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+    <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .3333 .3333 .3333 0 0" result="brightness"/>
+    <feComponentTransfer in="brightness" result="white-mask"><feFuncA type="discrete" tableValues="0 0 0 0 0 1"/></feComponentTransfer>
+    <feComposite in="white-mask" in2="SourceAlpha" operator="in" result="opaque-white-mask"/>
+    <feFlood flood-color="#193f50" x="36%" y="0" width="64%" height="100%" result="ink"/>
+    <feComposite in="ink" in2="opaque-white-mask" operator="in" result="dark-letters"/>
+    <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="dark-letters"/></feMerge>
+  </filter></defs></svg>
+  <a class="skip" href="#explorar">Ir para o painel</a>
+  <div class="municipal-utility"><span>CONTAGEM EM DADOS <span class="utility-divider">/</span> Observatório de indicadores</span><div><a href="#search">Buscar indicador</a><a href="https://portal.contagem.mg.gov.br/" target="_blank" rel="noopener noreferrer">Portal da Prefeitura ↗</a></div></div>
+  <header class="topbar municipal-topbar">
+    <a href="#inicio" class="city-brand" aria-label="Contagem em dados, início"><img src="/assets/logo-prefeitura.svg" alt="Prefeitura de Contagem — Trabalho todo dia" width="423" height="481"></a>
+    <nav aria-label="Navegação principal"><a class="active" href="#explorar">Indicadores</a><a href="#ods">ODS</a><a href="#cultura">Economia criativa</a><a href="#eventos">Eventos</a><a href="#dados">Fontes</a></nav>
+    <a class="sine-brand sine-lockup" href="#inicio" aria-label="SINE · início do painel"><img src="/assets/logo-sine.png" alt="SINE — Sistema Nacional de Emprego" width="1920" height="567"></a>
+  </header>
+  <main id="inicio">
+    <section class="overview" aria-labelledby="page-title">
+      <div class="hero">
+        <div><div class="eyebrow"><span class="live-dot"></span> CONTAGEM, MINAS GERAIS <span class="divider">/</span> IBGE 3118601</div><h1 id="page-title">CONTAGEM<br><span>EM DADOS</span></h1><p class="hero-description">Conhecer a cidade é o primeiro passo para transformar.<br class="desktop-break"> Explore população, trabalho e desenvolvimento com fontes verificáveis.</p></div>
+        <aside class="hero-aside"><div class="mini-grid" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><p>População, trabalho<br>e desenvolvimento.</p><div class="snapshot-label"><span class="live-dot"></span> Base conferida em <strong>20 out. 2026</strong></div><small>Os anos de referência variam por indicador.<br>Esta é uma base consultada, sem atualização automática.</small></aside>
+      </div>
+      <div class="dashboard-jump"><a href="#ods">ODS de Contagem <span>ONU + IDSC-BR →</span></a><a href="#cultura">Economia da cultura <span>Contexto Brasil · Itaú →</span></a><a href="#eventos">Agenda de Contagem <span>Eventos e atividades →</span></a></div>
+      <div id="coverage" class="coverage-strip" aria-label="Cobertura da base"></div>
+      <div class="filterbar" role="group" aria-label="Filtros do explorador de indicadores">
+        <div class="filter-title"><span class="filter-icon" aria-hidden="true">☷</span><div>Seu recorte<small>Anos ou edição · indicadores de Contagem</small></div></div>
+        <label class="field theme-field">Tema<select id="theme"><option value="Todos">Todos os temas</option><option>Economia</option><option>Trabalho</option><option>População</option></select></label>
+        <label class="field">De<select id="start" aria-label="Ano inicial"></select></label><span class="period-dash" aria-hidden="true">—</span><label class="field">Até<select id="end" aria-label="Ano final"></select></label>
+        <button id="reset" class="text-button">Limpar filtros <span aria-hidden="true">↺</span></button>
+      </div>
+      <div id="filter-status" class="filter-status" aria-live="polite"></div>
+      <div id="cards" class="cards" aria-label="Indicadores do recorte"></div>
+    </section>
+    <section id="explorar" class="explore" aria-labelledby="explore-title">
+      <div class="section-heading"><div><div class="eyebrow muted">01 / EXPLORAR</div><h2 id="explore-title">O que os dados mostram</h2></div><span class="soft-label">Fontes primárias · sem interpolação</span></div>
+      <div class="indicator-search">
+        <label for="search">Encontrar um indicador</label><input type="search" id="search" placeholder="Ex.: saúde, água, Cadastro Único…" autocomplete="off" aria-controls="search-results">
+        <div id="search-results" class="search-results" role="region" aria-label="Resultados da busca de indicadores" aria-live="polite" hidden></div>
+      </div>
+      <div class="explore-grid">
+        <article class="chart-panel panel">
+          <div class="chart-head"><div><label for="metric" class="mini-label">INDICADOR</label><select id="metric" class="metric-select"></select><div id="chart-subtitle" class="muted"></div></div><div class="chart-types" role="group" aria-label="Tipo de gráfico"><button id="line" aria-pressed="true" title="Gráfico de linhas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-7 5 3 5-8"/></svg><span>Linhas</span></button><button id="bar" aria-pressed="false" title="Gráfico de barras"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 19V11m6 8V5m6 14v-9"/></svg><span>Barras</span></button></div></div>
+          <div id="chart" class="chart" aria-live="polite"></div>
+          <div id="chart-legend" class="chart-legend"></div>
+          <div id="chart-source" class="chart-source"></div>
+        </article>
+        <aside class="compare-panel panel" aria-labelledby="compare-title"><div class="eyebrow muted">DOIS ANOS, EM DETALHE</div><h3 id="compare-title">Compare o período</h3><p class="muted small">Mesmo indicador, valores verificáveis.</p><div class="compare-inputs"><label class="field">Ano base<select id="base"></select></label><span aria-hidden="true">→</span><label class="field">Ano comparado<select id="target"></select></label></div><div id="comparison" aria-live="polite"></div><a href="#dados" class="compare-link">Conferir na tabela <span aria-hidden="true">↗</span></a></aside>
+      </div>
+      <div id="definition" class="definition"></div>
+    </section>
+    <section id="ods" class="dashboard-section" aria-labelledby="ods-title">
+      <div class="section-heading"><div><div class="eyebrow muted">02 / ODS E DESENVOLVIMENTO SUSTENTÁVEL</div><h2 id="ods-title">Contagem na Agenda 2030</h2><p class="muted">17 objetivos para explorar · pontuações do IDSC-BR · edição 2026</p></div><span class="reference-badge">Contagem · edição 2026</span></div>
+      <p class="dashboard-intro">A ONU define os Objetivos de Desenvolvimento Sustentável. O Instituto Cidades Sustentáveis calcula os escores municipais do IDSC-BR. <strong>A edição 2026 reúne indicadores de anos diversos.</strong> A pontuação de 0 a 100 não é uma porcentagem de metas cumpridas.</p>
+      <div id="ods-kpis" class="dashboard-kpis"></div>
+      <div class="dashboard-controls"><label class="field">Nível do IDSC<select id="ods-level"><option value="all">Todos os níveis</option><option value="very_high">Muito alto · 80 a 100</option><option value="high">Alto · 60 a 79,99</option><option value="medium">Médio · 50 a 59,99</option><option value="low">Baixo · 40 a 49,99</option><option value="very_low">Muito baixo · 0 a 39,99</option></select></label><label class="field">Ordenar objetivos<select id="ods-sort"><option value="number">Número do ODS</option><option value="asc">Menor pontuação primeiro</option><option value="desc">Maior pontuação primeiro</option></select></label><span id="ods-filter-count" class="muted small" aria-live="polite"></span><button id="ods-export" class="primary-button">Baixar ODS em CSV</button></div>
+      <div id="ods-tiles" class="ods-tiles" aria-label="Objetivos e pontuações de Contagem"></div>
+      <article id="ods-detail" class="ods-detail panel" aria-live="polite"></article>
+      <div class="panel dashboard-chart"><div class="table-header"><strong>Pontuação por objetivo</strong><span class="muted small">0 a 100 pontos · edição 2026</span></div><div class="hbar-axis"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div><div id="ods-bars" role="img" aria-label="Pontuações dos objetivos selecionados, escala de 0 a 100"></div></div>
+      <details class="panel dashboard-table"><summary>Conferir pontuações, edição e fontes</summary><div class="table-scroll"><table><caption class="sr-only">Escores do IDSC-BR de Contagem na edição 2026</caption><thead><tr><th>Objetivo</th><th class="number">Pontuação</th><th>Unidade</th><th>Referência</th><th>Nível</th><th>Fonte</th></tr></thead><tbody id="ods-rows"></tbody></table></div></details>
+      <p class="dashboard-source">Escores: <a href="https://idsc.cidadessustentaveis.org.br/#/cidade/3118601" target="_blank" rel="noopener noreferrer">Instituto Cidades Sustentáveis · IDSC-BR ↗</a> · <a id="ods-source-snapshot" href="#">Valores preservados para conferência (JSON)</a>. Objetivos e ícones: <a href="https://brasil.un.org/pt-br/sdgs" target="_blank" rel="noopener noreferrer">Nações Unidas no Brasil ↗</a>. Consulta: 20/10/2026. Os filtros deste painel são independentes do explorador acima.</p>
+    </section>
+    <section id="cultura" class="dashboard-section" aria-labelledby="culture-title">
+      <div class="section-heading"><div><div class="eyebrow muted">03 / ECONOMIA DA CULTURA E INDÚSTRIAS CRIATIVAS</div><h2 id="culture-title">A dimensão econômica da criatividade</h2><p class="muted">Panorama do Observatório Fundação Itaú · contexto nacional</p></div><span class="reference-badge">Brasil · referência 2020</span></div>
+      <div class="scope-notice"><strong>Este painel mostra o Brasil em 2020.</strong> Os valores nacionais e regionais são contexto para a análise de Contagem. Não são dados do município nem de Minas Gerais. O recorte tem filtros próprios; os anos selecionados no explorador não alteram este quadro.</div>
+      <div id="culture-kpis" class="dashboard-kpis"></div>
+      <div class="dashboard-controls"><label class="field">O que comparar<select id="culture-group"><option value="agrupamentos">Agrupamentos setoriais</option><option value="regioes">Contribuição por região</option><option value="participacao">ECIC no PIB brasileiro</option></select></label><label class="field">Ordenar categorias<select id="culture-sort"><option value="source">Ordem da fonte</option><option value="desc">Maior participação primeiro</option></select></label><span id="culture-row-count" class="muted small" aria-live="polite"></span><button id="culture-export" class="primary-button">Baixar ECIC em CSV</button></div>
+      <div class="panel dashboard-chart"><div class="table-header"><strong id="culture-chart-title"></strong><span id="culture-chart-unit" class="muted small"></span></div><div class="hbar-axis"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div><div id="culture-bars" role="img" aria-label="Participações da economia criativa no recorte selecionado, escala de 0 a 100 por cento"></div></div>
+      <div class="panel dashboard-table"><div class="table-header"><strong>Conferir valores e denominadores</strong><span class="muted small">2020 · contexto Brasil</span></div><div class="table-scroll"><table><caption class="sr-only">Economia da cultura e indústrias criativas, contexto Brasil 2020</caption><thead><tr><th>Indicador / categoria</th><th class="number">Valor</th><th>Unidade / denominador</th><th>Território / recorte</th><th>Referência</th><th>Fonte</th></tr></thead><tbody id="culture-rows"></tbody></table></div></div>
+      <p class="dashboard-source">Fonte: <a href="https://fundacaoitau.org.br/observatorio/dados/paineis-dados/dados-painel-ecic" target="_blank" rel="noopener noreferrer">Observatório Fundação Itaú · ECIC ↗</a> · <a id="culture-source-snapshot" href="#">Valores e recortes preservados (JSON)</a>. Referência dos números: 2020; consulta: 20/10/2026. As participações setoriais e regionais usam o PIB da ECIC nacional como denominador; o indicador de 3,11% usa o PIB brasileiro total.</p>
+      <p class="dashboard-source">Dados municipais de orçamento cultural ainda não confirmados nesta ampliação: a consulta do painel de origem retornou erro. Nenhum valor foi preenchido para Contagem.</p>
+    </section>
+    <section id="eventos" class="dashboard-section" aria-labelledby="events-title">
+      <div class="section-heading"><div><div class="eyebrow muted">AGENDA / CONTAGEM</div><h2 id="events-title">O que acontece na cidade</h2><p class="muted">Programação divulgada pela Prefeitura · consulta em <time datetime="2026-10-21">21/10/2026</time></p></div><a href="https://portal.contagem.mg.gov.br/portal/agenda/4" target="_blank" rel="noopener noreferrer">Agenda oficial ↗</a></div>
+      <p class="dashboard-intro">Uma seleção de eventos culturais e de economia solidária. Confira a fonte antes de sair: programação e inscrições podem mudar.</p>
+      <div class="dashboard-controls"><label class="field">Exibir<select id="events-period"><option value="upcoming">Próximos e em período de realização</option><option value="past">Encerrados</option><option value="all">Todos os eventos</option></select></label><label class="field">Categoria<select id="events-category"><option value="all">Todas</option><option>Cultura</option><option>Economia solidária</option></select></label><span id="events-count" class="muted small" role="status"></span></div>
+      <div id="events-list" class="events-grid" aria-live="polite"><p>Carregando agenda…</p></div>
+      <noscript><p>Ative o JavaScript para filtrar a agenda ou consulte a agenda oficial no link acima.</p></noscript>
+      <p class="dashboard-source">Cada evento tem sua fonte. Os encerrados ficam disponíveis no filtro. <a href="/events.json">Conferir registros e data da consulta (JSON)</a>.</p>
+    </section>
+    <section id="dados" class="data-section" aria-labelledby="data-title">
+      <div class="section-heading"><div><div class="eyebrow muted">04 / CONFERIR</div><h2 id="data-title">Os números, sem atalhos</h2><p class="muted">A mesma seleção do gráfico, com valores na unidade original e acesso à fonte.</p></div><button id="export" class="primary-button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v10m-4-4 4 4 4-4M3 13v4h14v-4"/></svg>Baixar tabela CSV</button></div>
+      <div class="panel table-panel"><div class="table-header"><strong id="table-title"></strong><span id="row-count" class="muted small"></span></div><div class="table-scroll"><table><caption class="sr-only">Valores por ano do indicador selecionado</caption><thead><tr><th scope="col">Referência <span aria-hidden="true">↓</span></th><th scope="col" class="number">Valor</th><th scope="col">Unidade</th><th scope="col">Série / situação</th><th scope="col">Fonte verificável</th></tr></thead><tbody id="rows"></tbody></table></div><div class="table-foot">“Sem valor na base” indica ausência de observação na seleção. Não equivale a zero.</div></div>
+      <div class="source-coverage"><div><div class="eyebrow muted">TRANSPARÊNCIA DA AMPLIAÇÃO</div><h3>O que ainda falta confirmar</h3><p>Fontes sem valor municipal verificável permanecem fora dos gráficos.</p></div><div id="source-status"></div></div>
+      <div class="method-grid"><details class="panel method"><summary><span><span class="method-icon" aria-hidden="true">i</span> Como ler este painel</span><span class="plus" aria-hidden="true">+</span></summary><div><p><strong>Unidade e referência.</strong> O ano ao lado do valor é o ano do dado, não o ano da consulta. Nos escores do IDSC, a referência é a edição do índice, identificada explicitamente; seus componentes têm anos diversos. O PIB é publicado em mil reais; os gráficos podem abreviar a escala em milhões ou bilhões. A tabela preserva a precisão publicada.</p><p><strong>Comparações.</strong> Indicadores em % mostram diferenças em pontos percentuais (p.p.); índices mostram diferenças na própria escala. Nos demais casos, a variação relativa é (valor comparado − valor base) ÷ valor base × 100. PIB e salários estão a preços correntes; as diferenças são nominais, sem ajuste por inflação.</p><p><strong>Trabalho.</strong> O CEMPRE retrata unidades locais de organizações formais em Contagem. Seus números não medem desemprego municipal, vagas abertas ou exclusivamente trabalhadores residentes. A mudança metodológica em 2022 impede comparações entre os dois trechos neste painel.</p><p><strong>População.</strong> Incluímos os Censos de 2010 e 2022. Os anos intermediários permanecem sem valor. Não há projeções para 2026 neste painel.</p><p><strong>Periodicidade.</strong> O filtro de anos recorta o ano de referência. O IGD-M tem apenas o retrato mensal de agosto de 2026 nesta base, identificado no cartão, gráfico, tabela e CSV; não é agregado anual.</p><p><strong>Saneamento.</strong> O SNIS deu lugar ao SINISA a partir da referência 2023. Os trechos aparecem separados; a comparação entre eles fica bloqueada. Coleta de esgoto, tratamento e cobertura de água têm denominadores distintos.</p><p><strong>Escopo.</strong> <span id="scope"></span></p><div id="quality-notes"></div></div></details><details class="panel method"><summary><span><span class="method-icon" aria-hidden="true">↗</span> Fontes e base de conferência</span><span class="plus" aria-hidden="true">+</span></summary><div id="sources-list"></div></details></div>
+    </section>
+  </main>
+  <footer><div class="footer-brand">Contagem <b>em dados</b><span class="author-credit">Autoria: <strong>Lavinia Hott</strong></span><span>Painel independente de consulta · sem vínculo institucional com a Prefeitura</span></div><span>Fontes: IBGE, FJP, MDS, Cidades, ICS, ONU e Fundação Itaú <span class="footer-dot">·</span> Base conferida em 20/10/2026</span></footer>
+  <div id="toast" role="status" class="toast" hidden></div>
+<script type="module">import { mountSiteWidget } from "/_sites/dispatch-assets/sites-widget.js";mountSiteWidget({"kind":"editor-composer","mobileEnabled":false,"environment":"production","chatgptOrigin":"https://chatgpt.com","locale":"pt-BR","accountId":"personal","projectId":"appgprj_6ad75c2dc52c8191b3e2b432237b3911","projectTitle":"Contagem em dados"});</script></body>
 </html>
