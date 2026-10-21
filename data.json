@@ -1,0 +1,3034 @@
+{
+  "municipality": "Contagem",
+  "state": "Minas Gerais",
+  "ibgeCode": "3118601",
+  "checkedAt": "2026-10-20",
+  "yearMin": 2010,
+  "yearMax": 2026,
+  "sources": {
+    "pib": {
+      "name": "IBGE · PIB dos Municípios",
+      "url": "https://servicodados.ibge.gov.br/api/v1/pesquisas/38/resultados/3118601",
+      "table": "Pesquisa 38 · série revisada",
+      "snapshot": "/fontes/pib_series.json",
+      "checkedAt": "2026-10-20"
+    },
+    "cempre_old": {
+      "name": "IBGE · CEMPRE",
+      "url": "https://apisidra.ibge.gov.br/values/t/1685/n6/3118601/v/706,708,10143/p/2010-2021?formato=json",
+      "table": "SIDRA 1685 · série até 2021",
+      "snapshot": "/fontes/cempre_antiga.json",
+      "checkedAt": "2026-10-20"
+    },
+    "cempre_new": {
+      "name": "IBGE · CEMPRE",
+      "url": "https://apisidra.ibge.gov.br/values/t/9509/n6/3118601/v/706,708,10143/p/all?formato=json",
+      "table": "SIDRA 9509 · série desde 2022",
+      "snapshot": "/fontes/cempre_nova.json",
+      "checkedAt": "2026-10-20"
+    },
+    "censo10": {
+      "name": "IBGE · Censo Demográfico 2010",
+      "url": "https://apisidra.ibge.gov.br/values/t/200/n6/3118601/v/93/p/2010?formato=json",
+      "table": "SIDRA 200 · totais",
+      "snapshot": "/fontes/pop_2010.json",
+      "checkedAt": "2026-10-20"
+    },
+    "censo22": {
+      "name": "IBGE · Censo Demográfico 2022",
+      "url": "https://apisidra.ibge.gov.br/values/t/4714/n6/3118601/v/93/p/2022?formato=json",
+      "table": "SIDRA 4714",
+      "snapshot": "/fontes/pop_censo.json",
+      "checkedAt": "2026-10-20"
+    },
+    "imrs": {
+      "name": "FJP · IMRS",
+      "table": "Perfil municipal · Contagem",
+      "url": "https://imrs.fjp.mg.gov.br/municipios/contagem/",
+      "snapshot": "/fontes/imrs_contagem.json",
+      "checkedAt": "2026-10-20",
+      "format": "Transcrição dos gráficos públicos (JSON)",
+      "note": "A fonte primária de cada série consta na definição do indicador. A transcrição preserva a precisão exibida nos gráficos da FJP."
+    },
+    "snis_ae_2022": {
+      "name": "Ministério das Cidades · SNIS",
+      "table": "Água e esgotos · COPASA · 2022",
+      "url": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/saneamento/snis/produtos-do-snis/diagnosticos/diagnostico_tematico_visao_geral_ae_snis_2023_atualizado2.zip",
+      "snapshot": "/fontes/snis_ae_2022.json",
+      "checkedAt": "2026-10-20",
+      "format": "Linha municipal e cabeçalhos da planilha (JSON)",
+      "note": "Extração com nome da planilha, linha, coluna e hash do arquivo original para auditoria."
+    },
+    "snis_rs_2022": {
+      "name": "Ministério das Cidades · SNIS",
+      "table": "Resíduos sólidos · SLU Contagem · 2022",
+      "url": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/saneamento/snis/produtos-do-snis/diagnosticos/Planilha_RS_2022_atualizado_29112024.zip",
+      "snapshot": "/fontes/snis_rs_2022.json",
+      "checkedAt": "2026-10-20",
+      "format": "Linha municipal e cabeçalhos da planilha (JSON)",
+      "note": "Extração com nome da planilha, linha, coluna e hash do arquivo original para auditoria."
+    },
+    "sinisa_agua_2024": {
+      "name": "Ministério das Cidades · SINISA",
+      "table": "Água · base municipal · 2024",
+      "url": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/saneamento/sinisa/resultados-sinisa/SINISA_Resultados_Ref2024.zip",
+      "snapshot": "/fontes/sinisa_agua_2024.json",
+      "checkedAt": "2026-10-20",
+      "format": "Linha municipal e cabeçalhos da planilha (JSON)",
+      "note": "Extração com nome da planilha, linha, coluna e hash do arquivo original para auditoria."
+    },
+    "sinisa_esgoto_2024": {
+      "name": "Ministério das Cidades · SINISA",
+      "table": "Esgoto · base municipal · 2024",
+      "url": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/acoes-e-programas/saneamento/sinisa/resultados-sinisa/SINISA_ESGOTO_Planilhas_2024.zip",
+      "snapshot": "/fontes/sinisa_esgoto_2024.json",
+      "checkedAt": "2026-10-20",
+      "format": "Linha municipal e cabeçalhos da planilha (JSON)",
+      "note": "Extração com nome da planilha, linha, coluna e hash do arquivo original para auditoria."
+    },
+    "mds_igd": {
+      "name": "MDS · Relatório Bolsa Família e Cadastro Único",
+      "table": "IGD-M · relatório municipal",
+      "url": "https://aplicacoes.mds.gov.br/sagi/RIv3/geral/conteudo_modulo.php?id=2108&ibge=311860&area=&ano=&mes=&ct_captcha=RIPBFPATS&ctidr=",
+      "snapshot": "/fontes/mds_igd_contagem.json",
+      "checkedAt": "2026-10-20",
+      "format": "Trecho do relatório e valor verificado (JSON)",
+      "note": "A ficha IN091 documenta o conceito. O valor de Contagem vem do relatório municipal do MDS.",
+      "methodologyUrl": "https://wiki-sagi.mds.gov.br/home/DS/NBF/I/IN091"
+    },
+    "idsc": {
+      "name": "Instituto Cidades Sustentáveis · IDSC-BR",
+      "table": "Contagem · edição 2026",
+      "url": "https://idsc.cidadessustentaveis.org.br/#/cidade/3118601",
+      "snapshot": "/fontes/idsc_contagem_2026.json",
+      "checkedAt": "2026-10-20",
+      "format": "Transcrição do perfil municipal (JSON)",
+      "note": "Escores por objetivo preservam uma casa decimal exibida na visão geral. O ano é a edição do índice; os componentes usam referências diversas. Não são valores produzidos pela ONU."
+    },
+    "ods_un": {
+      "name": "Nações Unidas no Brasil · ODS",
+      "table": "Agenda 2030 · referencial dos 17 objetivos",
+      "url": "https://brasil.un.org/pt-br/sdgs",
+      "snapshot": "/fontes/onu_ods.json",
+      "checkedAt": "2026-10-20",
+      "format": "Objetivos, títulos e links oficiais (JSON)",
+      "note": "Referência conceitual e ícones. Esta página não fornece uma pontuação municipal de Contagem."
+    },
+    "itau_ecic": {
+      "name": "Observatório Fundação Itaú · Itaú Cultural",
+      "table": "Panorama Brasil · PIB da ECIC · 2020",
+      "url": "https://fundacaoitau.org.br/observatorio/dados/paineis-dados/dados-painel-ecic",
+      "snapshot": "/fontes/itau_ecic_2020.json",
+      "checkedAt": "2026-10-20",
+      "format": "Valores e recortes do Panorama Brasil (JSON)",
+      "note": "Painel de contexto nacional, separado dos indicadores de Contagem. Ano confirmado: 2020. Os denominadores estão identificados em cada gráfico e tabela."
+    }
+  },
+  "metrics": [
+    {
+      "id": "pib",
+      "label": "PIB a preços correntes",
+      "theme": "Economia",
+      "unit": "R$ mil",
+      "decimals": 3,
+      "definition": "Valor dos bens e serviços finais produzidos no município no ano, a preços correntes. A unidade original é mil reais.",
+      "note": "Variação nominal, sem descontar a inflação. O ano-base da série é 2010; o ano de referência é o de cada observação.",
+      "values": [
+        {
+          "year": 2010,
+          "value": 19142636.0,
+          "original": "19142636",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2011,
+          "value": 20220913.0,
+          "original": "20220913",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2012,
+          "value": 22576505.0,
+          "original": "22576505",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2013,
+          "value": 24358358.0,
+          "original": "24358358",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2014,
+          "value": 26437650.16,
+          "original": "26437650.16",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2015,
+          "value": 26028295.05,
+          "original": "26028295.05",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2016,
+          "value": 26490561.45,
+          "original": "26490561.45",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2017,
+          "value": 28995182.7,
+          "original": "28995182.70",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2018,
+          "value": 27820452.25,
+          "original": "27820452.25",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2019,
+          "value": 30446854.137,
+          "original": "30446854.137",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2020,
+          "value": 29561690.409,
+          "original": "29561690.409",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2021,
+          "value": 36478510.812,
+          "original": "36478510.812",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2022,
+          "value": 42596067.422,
+          "original": "42596067.422",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2023,
+          "value": 45092392.887,
+          "original": "45092392.887",
+          "source": "pib",
+          "variable": "46997",
+          "series": "Referência 2010 · revisada"
+        }
+      ],
+      "money": true,
+      "color": "#166e62",
+      "sourceIds": [
+        "pib"
+      ]
+    },
+    {
+      "id": "pib_pc",
+      "label": "PIB per capita",
+      "theme": "Economia",
+      "unit": "R$ por habitante",
+      "decimals": 2,
+      "definition": "PIB municipal dividido pela população utilizada pelo IBGE. É uma medida de produção por habitante, não de salário ou renda familiar.",
+      "note": "Em 2022 e 2023, o IBGE utiliza os dados populacionais do Censo 2022. A mudança na base populacional exige cautela ao comparar com anos anteriores. Valores correntes, sem correção pela inflação.",
+      "values": [
+        {
+          "year": 2010,
+          "value": 31743.14,
+          "original": "31743.14",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2011,
+          "value": 33219.02,
+          "original": "33219.02",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2012,
+          "value": 36780.63,
+          "original": "36780.63",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2013,
+          "value": 38181.58,
+          "original": "38181.58",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2014,
+          "value": 41085.68,
+          "original": "41085.68",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2015,
+          "value": 40119.7,
+          "original": "40119.70",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2016,
+          "value": 40517.84,
+          "original": "40517.84",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2017,
+          "value": 44026.82,
+          "original": "44026.82",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2018,
+          "value": 42211.68,
+          "original": "42211.68",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2019,
+          "value": 45863.71,
+          "original": "45863.71",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2020,
+          "value": 44191.25,
+          "original": "44191.25",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2021,
+          "value": 54134.55,
+          "original": "54134.55",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2022,
+          "value": 68497.29,
+          "original": "68497.29",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        },
+        {
+          "year": 2023,
+          "value": 72511.78,
+          "original": "72511.78",
+          "source": "pib",
+          "variable": "47001",
+          "series": "Referência 2010 · revisada"
+        }
+      ],
+      "money": true,
+      "color": "#166e62",
+      "sourceIds": [
+        "pib"
+      ]
+    },
+    {
+      "id": "assalariados",
+      "label": "Pessoal ocupado assalariado",
+      "theme": "Trabalho",
+      "unit": "pessoas",
+      "decimals": 0,
+      "definition": "Pessoal assalariado nas unidades locais de empresas e outras organizações formais situadas em Contagem. Refere-se ao local de trabalho; não ao total de moradores empregados. Não é saldo de admissões e desligamentos.",
+      "note": "Quebra metodológica em 2022 no CEMPRE. A série até 2021 e a série desde 2022 são exibidas separadamente; comparações entre os dois trechos são bloqueadas.",
+      "values": [
+        {
+          "year": 2010,
+          "value": 190812.0,
+          "original": "190812",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2011,
+          "value": 197789.0,
+          "original": "197789",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2012,
+          "value": 206940.0,
+          "original": "206940",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2013,
+          "value": 213991.0,
+          "original": "213991",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2014,
+          "value": 209027.0,
+          "original": "209027",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2015,
+          "value": 195879.0,
+          "original": "195879",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2016,
+          "value": 182471.0,
+          "original": "182471",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2017,
+          "value": 185894.0,
+          "original": "185894",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2018,
+          "value": 188647.0,
+          "original": "188647",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2019,
+          "value": 188767.0,
+          "original": "188767",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2020,
+          "value": 191558.0,
+          "original": "191558",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2021,
+          "value": 199656.0,
+          "original": "199656",
+          "source": "cempre_old",
+          "variable": "708",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2022,
+          "value": 219126.0,
+          "original": "219126",
+          "source": "cempre_new",
+          "variable": "708",
+          "series": "Série desde 2022"
+        },
+        {
+          "year": 2023,
+          "value": 225474.0,
+          "original": "225474",
+          "source": "cempre_new",
+          "variable": "708",
+          "series": "Série desde 2022"
+        },
+        {
+          "year": 2024,
+          "value": 225913.0,
+          "original": "225913",
+          "source": "cempre_new",
+          "variable": "708",
+          "series": "Série desde 2022"
+        }
+      ],
+      "breakYear": 2022,
+      "color": "#4c68aa",
+      "sourceIds": [
+        "cempre_old",
+        "cempre_new"
+      ]
+    },
+    {
+      "id": "salario",
+      "label": "Salário médio mensal",
+      "theme": "Trabalho",
+      "unit": "R$",
+      "decimals": 2,
+      "definition": "Salário médio mensal do pessoal assalariado nas unidades locais de empresas e outras organizações formais, conforme publicado pelo CEMPRE. Não representa a renda média de todos os moradores.",
+      "note": "Valores nominais, sem descontar a inflação. Quebra metodológica em 2022: o painel não calcula variações entre os dois trechos do CEMPRE.",
+      "values": [
+        {
+          "year": 2010,
+          "value": 1423.99,
+          "original": "1423.99",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2011,
+          "value": 1506.27,
+          "original": "1506.27",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2012,
+          "value": 1638.25,
+          "original": "1638.25",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2013,
+          "value": 1822.38,
+          "original": "1822.38",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2014,
+          "value": 1941.37,
+          "original": "1941.37",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2015,
+          "value": 2060.52,
+          "original": "2060.52",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2016,
+          "value": 2233.64,
+          "original": "2233.64",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2017,
+          "value": 2362.61,
+          "original": "2362.61",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2018,
+          "value": 2473.7,
+          "original": "2473.70",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2019,
+          "value": 2366.89,
+          "original": "2366.89",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2020,
+          "value": 2417.7,
+          "original": "2417.70",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2021,
+          "value": 2669.22,
+          "original": "2669.22",
+          "source": "cempre_old",
+          "variable": "10143",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2022,
+          "value": 2905.56,
+          "original": "2905.56",
+          "source": "cempre_new",
+          "variable": "10143",
+          "series": "Série desde 2022"
+        },
+        {
+          "year": 2023,
+          "value": 3139.05,
+          "original": "3139.05",
+          "source": "cempre_new",
+          "variable": "10143",
+          "series": "Série desde 2022"
+        },
+        {
+          "year": 2024,
+          "value": 3322.44,
+          "original": "3322.44",
+          "source": "cempre_new",
+          "variable": "10143",
+          "series": "Série desde 2022"
+        }
+      ],
+      "breakYear": 2022,
+      "money": true,
+      "color": "#4c68aa",
+      "sourceIds": [
+        "cempre_old",
+        "cempre_new"
+      ]
+    },
+    {
+      "id": "unidades",
+      "label": "Unidades locais",
+      "theme": "Trabalho",
+      "unit": "unidades",
+      "decimals": 0,
+      "definition": "Endereços de atuação das empresas e outras organizações formais em Contagem, segundo o CEMPRE. Uma organização pode possuir mais de uma unidade local.",
+      "note": "Quebra metodológica em 2022. Unidades locais não equivalem ao número de novas empresas abertas no ano.",
+      "values": [
+        {
+          "year": 2010,
+          "value": 18015.0,
+          "original": "18015",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2011,
+          "value": 18168.0,
+          "original": "18168",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2012,
+          "value": 18271.0,
+          "original": "18271",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2013,
+          "value": 19060.0,
+          "original": "19060",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2014,
+          "value": 17697.0,
+          "original": "17697",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2015,
+          "value": 18147.0,
+          "original": "18147",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2016,
+          "value": 17585.0,
+          "original": "17585",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2017,
+          "value": 17380.0,
+          "original": "17380",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2018,
+          "value": 17165.0,
+          "original": "17165",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2019,
+          "value": 18301.0,
+          "original": "18301",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2020,
+          "value": 18884.0,
+          "original": "18884",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2021,
+          "value": 20234.0,
+          "original": "20234",
+          "source": "cempre_old",
+          "variable": "706",
+          "series": "Série até 2021"
+        },
+        {
+          "year": 2022,
+          "value": 32398.0,
+          "original": "32398",
+          "source": "cempre_new",
+          "variable": "706",
+          "series": "Série desde 2022"
+        },
+        {
+          "year": 2023,
+          "value": 34920.0,
+          "original": "34920",
+          "source": "cempre_new",
+          "variable": "706",
+          "series": "Série desde 2022"
+        },
+        {
+          "year": 2024,
+          "value": 37042.0,
+          "original": "37042",
+          "source": "cempre_new",
+          "variable": "706",
+          "series": "Série desde 2022"
+        }
+      ],
+      "breakYear": 2022,
+      "color": "#4c68aa",
+      "sourceIds": [
+        "cempre_old",
+        "cempre_new"
+      ]
+    },
+    {
+      "id": "populacao",
+      "label": "População residente · Censo",
+      "theme": "População",
+      "unit": "pessoas",
+      "decimals": 0,
+      "definition": "Pessoas residentes em Contagem contadas pelos Censos Demográficos de 2010 e 2022, nas tabelas oficiais consultadas.",
+      "note": "Há observações apenas nos anos censitários incluídos: 2010 e 2022. Não foram interpolados valores nem misturadas estimativas anuais com os Censos.",
+      "values": [
+        {
+          "year": 2010,
+          "value": 603442,
+          "original": "603442",
+          "source": "censo10",
+          "variable": "93",
+          "series": "Censo Demográfico"
+        },
+        {
+          "year": 2022,
+          "value": 621863,
+          "original": "621863",
+          "source": "censo22",
+          "variable": "93",
+          "series": "Censo Demográfico"
+        }
+      ],
+      "sparse": true,
+      "color": "#b8773c",
+      "sourceIds": [
+        "censo10",
+        "censo22"
+      ]
+    },
+    {
+      "id": "imrs",
+      "label": "Índice Mineiro de Responsabilidade Social",
+      "theme": "Desenvolvimento",
+      "unit": "índice de 0 a 1",
+      "decimals": 3,
+      "cardDecimals": 3,
+      "definition": "Índice sintético da Fundação João Pinheiro que reúne dimensões da responsabilidade social municipal. Na escala de 0 a 1, valores maiores representam resultados melhores segundo a metodologia do IMRS.",
+      "note": "Série 2019–2024 exibida pela FJP. Não é o ISDEL do Sebrae nem o IDHM.",
+      "color": "#7761a1",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "FJP",
+      "comparison": "index",
+      "values": [
+        {
+          "year": 2019,
+          "value": 0.351,
+          "original": "0.351",
+          "source": "imrs",
+          "variable": "chart_0",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 0.353,
+          "original": "0.353",
+          "source": "imrs",
+          "variable": "chart_0",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 0.357,
+          "original": "0.357",
+          "source": "imrs",
+          "variable": "chart_0",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 0.377,
+          "original": "0.377",
+          "source": "imrs",
+          "variable": "chart_0",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 0.504,
+          "original": "0.504",
+          "source": "imrs",
+          "variable": "chart_0",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 0.512,
+          "original": "0.512",
+          "source": "imrs",
+          "variable": "chart_0",
+          "series": "IMRS · série 2019–2024"
+        }
+      ],
+      "scaleMax": 1
+    },
+    {
+      "id": "educacao_atendimento",
+      "label": "Atendimento da educação básica",
+      "theme": "Educação",
+      "unit": "%",
+      "decimals": 2,
+      "cardDecimals": 2,
+      "definition": "Taxa de atendimento da educação básica publicada no perfil municipal do IMRS. Relaciona matrículas à população de referência de 4 a 17 anos.",
+      "note": "Fonte: MEC/INEP; população estimada pela RIPSA. É um indicador de atendimento, não uma nota de aprendizagem.",
+      "color": "#387c83",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "MEC/INEP; população RIPSA",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 97.24,
+          "original": "97.24",
+          "source": "imrs",
+          "variable": "chart_1",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 98.38,
+          "original": "98.38",
+          "source": "imrs",
+          "variable": "chart_1",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 93.13,
+          "original": "93.13",
+          "source": "imrs",
+          "variable": "chart_1",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 96.84,
+          "original": "96.84",
+          "source": "imrs",
+          "variable": "chart_1",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 93.28,
+          "original": "93.28",
+          "source": "imrs",
+          "variable": "chart_1",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 93.28,
+          "original": "93.28",
+          "source": "imrs",
+          "variable": "chart_1",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "distorcao",
+      "label": "Distorção idade-série · EF anos finais",
+      "theme": "Educação",
+      "unit": "%",
+      "decimals": 1,
+      "cardDecimals": 1,
+      "definition": "Taxa de distorção idade-série nos anos finais do Ensino Fundamental, conforme o INEP e a consolidação da FJP. Identifica alunos com atraso de dois anos ou mais em relação à idade recomendada para a série.",
+      "note": "Fonte: MEC/INEP. Uma queda indica menor distorção; o indicador não mede diretamente a aprendizagem.",
+      "color": "#387c83",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "MEC/INEP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 17.5,
+          "original": "17.5",
+          "source": "imrs",
+          "variable": "chart_2",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 18.3,
+          "original": "18.3",
+          "source": "imrs",
+          "variable": "chart_2",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 16.1,
+          "original": "16.1",
+          "source": "imrs",
+          "variable": "chart_2",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 12.7,
+          "original": "12.7",
+          "source": "imrs",
+          "variable": "chart_2",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 10.2,
+          "original": "10.2",
+          "source": "imrs",
+          "variable": "chart_2",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 10.7,
+          "original": "10.7",
+          "source": "imrs",
+          "variable": "chart_2",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "docentes_infantil",
+      "label": "Docentes no grupo 1 · Educação Infantil",
+      "theme": "Educação",
+      "unit": "%",
+      "decimals": 1,
+      "cardDecimals": 1,
+      "definition": "Percentual de docentes da Educação Infantil cuja formação é classificada no grupo 1 do indicador de adequação da formação docente do INEP.",
+      "note": "Fonte: MEC/INEP, Censo Escolar. Grupo 1 é a categoria de formação adequada definida pelo INEP para a etapa/disciplina.",
+      "color": "#387c83",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "MEC/INEP, Censo Escolar",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 59.3,
+          "original": "59.3",
+          "source": "imrs",
+          "variable": "chart_3",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 62.5,
+          "original": "62.5",
+          "source": "imrs",
+          "variable": "chart_3",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 73.2,
+          "original": "73.2",
+          "source": "imrs",
+          "variable": "chart_3",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 73.4,
+          "original": "73.4",
+          "source": "imrs",
+          "variable": "chart_3",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 92.4,
+          "original": "92.4",
+          "source": "imrs",
+          "variable": "chart_3",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 91.8,
+          "original": "91.8",
+          "source": "imrs",
+          "variable": "chart_3",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "docentes_iniciais",
+      "label": "Docentes no grupo 1 · EF anos iniciais",
+      "theme": "Educação",
+      "unit": "%",
+      "decimals": 1,
+      "cardDecimals": 1,
+      "definition": "Percentual de docentes dos anos iniciais do Ensino Fundamental com formação classificada no grupo 1 pelo INEP.",
+      "note": "Fonte: MEC/INEP, Censo Escolar. A classificação considera a formação e a etapa/disciplina em que o docente atua.",
+      "color": "#387c83",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "MEC/INEP, Censo Escolar",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 74.3,
+          "original": "74.3",
+          "source": "imrs",
+          "variable": "chart_4",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 76.6,
+          "original": "76.6",
+          "source": "imrs",
+          "variable": "chart_4",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 77.1,
+          "original": "77.1",
+          "source": "imrs",
+          "variable": "chart_4",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 81.2,
+          "original": "81.2",
+          "source": "imrs",
+          "variable": "chart_4",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 87.9,
+          "original": "87.9",
+          "source": "imrs",
+          "variable": "chart_4",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 88.8,
+          "original": "88.8",
+          "source": "imrs",
+          "variable": "chart_4",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "docentes_finais",
+      "label": "Docentes no grupo 1 · EF anos finais",
+      "theme": "Educação",
+      "unit": "%",
+      "decimals": 1,
+      "cardDecimals": 1,
+      "definition": "Percentual de docentes dos anos finais do Ensino Fundamental com formação classificada no grupo 1 pelo INEP.",
+      "note": "Fonte: MEC/INEP, Censo Escolar. Não equivale ao percentual de professores com qualquer diploma superior.",
+      "color": "#387c83",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "MEC/INEP, Censo Escolar",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 72.3,
+          "original": "72.3",
+          "source": "imrs",
+          "variable": "chart_5",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 75.1,
+          "original": "75.1",
+          "source": "imrs",
+          "variable": "chart_5",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 71.3,
+          "original": "71.3",
+          "source": "imrs",
+          "variable": "chart_5",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 80.5,
+          "original": "80.5",
+          "source": "imrs",
+          "variable": "chart_5",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 80.8,
+          "original": "80.8",
+          "source": "imrs",
+          "variable": "chart_5",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 81.9,
+          "original": "81.9",
+          "source": "imrs",
+          "variable": "chart_5",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "prenatal",
+      "label": "Pré-natal · 7 ou mais consultas",
+      "theme": "Saúde",
+      "unit": "%",
+      "decimals": 5,
+      "cardDecimals": 2,
+      "definition": "Proporção de nascidos vivos cujas mães realizaram sete ou mais consultas de pré-natal, publicada pela FJP para Contagem.",
+      "note": "Fonte: SES-MG; elaboração FJP. A quantidade de consultas não resume, sozinha, a qualidade do cuidado.",
+      "color": "#a15a71",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "SES-MG; elaboração FJP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 76.25333,
+          "original": "76.25333",
+          "source": "imrs",
+          "variable": "chart_6",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 78.45395,
+          "original": "78.45395",
+          "source": "imrs",
+          "variable": "chart_6",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 79.87313,
+          "original": "79.87313",
+          "source": "imrs",
+          "variable": "chart_6",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 78.62742,
+          "original": "78.62742",
+          "source": "imrs",
+          "variable": "chart_6",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 81.96571,
+          "original": "81.96571",
+          "source": "imrs",
+          "variable": "chart_6",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 80.42381,
+          "original": "80.42381",
+          "source": "imrs",
+          "variable": "chart_6",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "internacoes",
+      "label": "Internações sensíveis à atenção básica",
+      "theme": "Saúde",
+      "unit": "%",
+      "decimals": 2,
+      "cardDecimals": 2,
+      "definition": "Proporção de internações por condições sensíveis à atenção básica, segundo a série do IMRS.",
+      "note": "Fonte: SES-MG; elaboração FJP. O percentual se refere às internações consideradas na fonte, não ao percentual de moradores internados.",
+      "color": "#a15a71",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "SES-MG; elaboração FJP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 30.68,
+          "original": "30.68",
+          "source": "imrs",
+          "variable": "chart_7",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 26.77,
+          "original": "26.77",
+          "source": "imrs",
+          "variable": "chart_7",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 21.94,
+          "original": "21.94",
+          "source": "imrs",
+          "variable": "chart_7",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 30.91,
+          "original": "30.91",
+          "source": "imrs",
+          "variable": "chart_7",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 28.54,
+          "original": "28.54",
+          "source": "imrs",
+          "variable": "chart_7",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 31.95,
+          "original": "31.95",
+          "source": "imrs",
+          "variable": "chart_7",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "medicos",
+      "label": "Médicos por mil habitantes",
+      "theme": "Saúde",
+      "unit": "médicos por mil habitantes",
+      "decimals": 2,
+      "cardDecimals": 2,
+      "definition": "Número de médicos por mil habitantes na série consolidada pela FJP com informações do DATASUS/Tabnet e população estimada pela RIPSA.",
+      "note": "A disponibilidade de médicos não indica, sozinha, acesso efetivo, carga horária ou qualidade dos serviços.",
+      "color": "#a15a71",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "Ministério da Saúde, DATASUS/Tabnet; população RIPSA; elaboração FJP",
+      "comparison": "relative",
+      "values": [
+        {
+          "year": 2019,
+          "value": 1.37,
+          "original": "1.37",
+          "source": "imrs",
+          "variable": "chart_8",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 1.36,
+          "original": "1.36",
+          "source": "imrs",
+          "variable": "chart_8",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 1.36,
+          "original": "1.36",
+          "source": "imrs",
+          "variable": "chart_8",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 1.36,
+          "original": "1.36",
+          "source": "imrs",
+          "variable": "chart_8",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 1.68,
+          "original": "1.68",
+          "source": "imrs",
+          "variable": "chart_8",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 1.51,
+          "original": "1.51",
+          "source": "imrs",
+          "variable": "chart_8",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "mortalidade_dcnt",
+      "label": "Mortalidade por DCNT · 30 a 69 anos",
+      "theme": "Saúde",
+      "unit": "óbitos por 100 mil habitantes de 30 a 69 anos",
+      "decimals": 5,
+      "cardDecimals": 2,
+      "definition": "Taxa de mortalidade por doenças crônicas não transmissíveis entre pessoas de 30 a 69 anos, conforme a FJP.",
+      "note": "Fonte: SES-MG/Tabnet; população RIPSA. O denominador é a população da faixa etária, não toda a população municipal.",
+      "color": "#a15a71",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "SES-MG/Tabnet; população RIPSA; elaboração FJP",
+      "comparison": "relative",
+      "values": [
+        {
+          "year": 2019,
+          "value": 256.07024,
+          "original": "256.07024",
+          "source": "imrs",
+          "variable": "chart_9",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 251.28796,
+          "original": "251.28796",
+          "source": "imrs",
+          "variable": "chart_9",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 272.61925,
+          "original": "272.61925",
+          "source": "imrs",
+          "variable": "chart_9",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 254.71838,
+          "original": "254.71838",
+          "source": "imrs",
+          "variable": "chart_9",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 249.36801,
+          "original": "249.36801",
+          "source": "imrs",
+          "variable": "chart_9",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 249.96476,
+          "original": "249.96476",
+          "source": "imrs",
+          "variable": "chart_9",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "obitos_causas",
+      "label": "Óbitos por causas mal definidas",
+      "theme": "Saúde",
+      "unit": "%",
+      "decimals": 5,
+      "cardDecimals": 2,
+      "definition": "Proporção de óbitos classificados como de causas mal definidas na série do IMRS.",
+      "note": "Fonte: SES-MG/Tabnet; elaboração FJP. É um indicador da definição das causas registradas, não uma causa específica de morte.",
+      "color": "#a15a71",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "SES-MG/Tabnet; elaboração FJP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 10.48586,
+          "original": "10.48586",
+          "source": "imrs",
+          "variable": "chart_10",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 5.90219,
+          "original": "5.90219",
+          "source": "imrs",
+          "variable": "chart_10",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 3.22896,
+          "original": "3.22896",
+          "source": "imrs",
+          "variable": "chart_10",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 4.55847,
+          "original": "4.55847",
+          "source": "imrs",
+          "variable": "chart_10",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 5.10229,
+          "original": "5.10229",
+          "source": "imrs",
+          "variable": "chart_10",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 4.19616,
+          "original": "4.19616",
+          "source": "imrs",
+          "variable": "chart_10",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "mortalidade_infantil",
+      "label": "Mortalidade infantil",
+      "theme": "Saúde",
+      "unit": "óbitos de menores de 1 ano por mil nascidos vivos",
+      "decimals": 5,
+      "cardDecimals": 2,
+      "definition": "Óbitos de crianças menores de um ano por mil nascidos vivos, conforme a série SIM/SINASC consolidada pela FJP.",
+      "note": "Fonte: Ministério da Saúde, SIM/SINASC; elaboração FJP. A série consultada termina em 2023; 2024 não foi preenchido.",
+      "color": "#a15a71",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "Ministério da Saúde, SIM/SINASC; elaboração FJP",
+      "comparison": "relative",
+      "values": [
+        {
+          "year": 2019,
+          "value": 9.57918,
+          "original": "9.57918",
+          "source": "imrs",
+          "variable": "chart_11",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 8.75016,
+          "original": "8.75016",
+          "source": "imrs",
+          "variable": "chart_11",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 8.03378,
+          "original": "8.03378",
+          "source": "imrs",
+          "variable": "chart_11",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 9.93166,
+          "original": "9.93166",
+          "source": "imrs",
+          "variable": "chart_11",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 10.16,
+          "original": "10.16",
+          "source": "imrs",
+          "variable": "chart_11",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "cadunico",
+      "label": "População inscrita no Cadastro Único",
+      "theme": "Assistência social",
+      "unit": "%",
+      "decimals": 2,
+      "cardDecimals": 2,
+      "definition": "Percentual da população municipal inscrita no Cadastro Único, conforme a consolidação do IMRS.",
+      "note": "Fonte: Ministério da Cidadania/SAGI; elaboração FJP. Inscrição no Cadastro Único não equivale a receber Bolsa Família e não deve ser tratada como taxa de pobreza.",
+      "color": "#916b37",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "Ministério da Cidadania/SAGI; elaboração FJP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 22.42,
+          "original": "22.42",
+          "source": "imrs",
+          "variable": "chart_12",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 22.62,
+          "original": "22.62",
+          "source": "imrs",
+          "variable": "chart_12",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 26.42,
+          "original": "26.42",
+          "source": "imrs",
+          "variable": "chart_12",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 32.45,
+          "original": "32.45",
+          "source": "imrs",
+          "variable": "chart_12",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 35.2,
+          "original": "35.2",
+          "source": "imrs",
+          "variable": "chart_12",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 34.31,
+          "original": "34.31",
+          "source": "imrs",
+          "variable": "chart_12",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "cadunico_escolaridade",
+      "label": "CadÚnico · 25+ com médio incompleto",
+      "theme": "Assistência social",
+      "unit": "%",
+      "decimals": 2,
+      "cardDecimals": 2,
+      "definition": "Percentual de pessoas com 25 anos ou mais inscritas no Cadastro Único que têm ensino médio incompleto, conforme o rótulo publicado pelo IMRS.",
+      "note": "Fonte: Ministério da Cidadania/SAGI; elaboração FJP. O recorte é a população cadastrada dessa faixa etária; não toda a população de Contagem.",
+      "color": "#916b37",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "Ministério da Cidadania/SAGI; elaboração FJP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 61.45,
+          "original": "61.45",
+          "source": "imrs",
+          "variable": "chart_13",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 59.73,
+          "original": "59.73",
+          "source": "imrs",
+          "variable": "chart_13",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 57.46,
+          "original": "57.46",
+          "source": "imrs",
+          "variable": "chart_13",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 55.17,
+          "original": "55.17",
+          "source": "imrs",
+          "variable": "chart_13",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 52.96,
+          "original": "52.96",
+          "source": "imrs",
+          "variable": "chart_13",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 51.03,
+          "original": "51.03",
+          "source": "imrs",
+          "variable": "chart_13",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "assistencia_profissionais",
+      "label": "Assistentes sociais e psicólogos",
+      "theme": "Assistência social",
+      "unit": "profissionais por mil pessoas no CadÚnico",
+      "decimals": 5,
+      "cardDecimals": 2,
+      "definition": "Assistentes sociais e psicólogos na assistência social por mil pessoas inscritas no Cadastro Único, conforme a FJP.",
+      "note": "Fonte: Ministério da Cidadania/SAGI; elaboração FJP. O denominador são pessoas cadastradas, não o total de moradores.",
+      "color": "#916b37",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "Ministério da Cidadania/SAGI; elaboração FJP",
+      "comparison": "relative",
+      "values": [
+        {
+          "year": 2019,
+          "value": 1.11655,
+          "original": "1.11655",
+          "source": "imrs",
+          "variable": "chart_14",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 0.55457,
+          "original": "0.55457",
+          "source": "imrs",
+          "variable": "chart_14",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 0.90081,
+          "original": "0.90081",
+          "source": "imrs",
+          "variable": "chart_14",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 0.77524,
+          "original": "0.77524",
+          "source": "imrs",
+          "variable": "chart_14",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 0.65674,
+          "original": "0.65674",
+          "source": "imrs",
+          "variable": "chart_14",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 0.70392,
+          "original": "0.70392",
+          "source": "imrs",
+          "variable": "chart_14",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "investimento",
+      "label": "Investimento / despesa total",
+      "theme": "Finanças públicas",
+      "unit": "%",
+      "decimals": 2,
+      "cardDecimals": 2,
+      "definition": "Participação do investimento na despesa total municipal, conforme a série TCE-MG consolidada no IMRS.",
+      "note": "É uma proporção da despesa total, não um valor em reais. Não mede isoladamente a qualidade ou o impacto do investimento.",
+      "color": "#586bb1",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "TCE-MG; elaboração FJP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 7.65,
+          "original": "7.65",
+          "source": "imrs",
+          "variable": "chart_15",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 12.4,
+          "original": "12.4",
+          "source": "imrs",
+          "variable": "chart_15",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 6.1,
+          "original": "6.1",
+          "source": "imrs",
+          "variable": "chart_15",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 10.4,
+          "original": "10.4",
+          "source": "imrs",
+          "variable": "chart_15",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 12.31,
+          "original": "12.31",
+          "source": "imrs",
+          "variable": "chart_15",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 12.31,
+          "original": "12.31",
+          "source": "imrs",
+          "variable": "chart_15",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "pessoal_rcl",
+      "label": "Gasto com pessoal / RCL",
+      "theme": "Finanças públicas",
+      "unit": "%",
+      "decimals": 2,
+      "cardDecimals": 2,
+      "definition": "Gasto com pessoal em relação à Receita Corrente Líquida (RCL), na série TCE-MG consolidada pela FJP.",
+      "note": "Este painel reproduz o indicador do IMRS; não faz avaliação de cumprimento de limites legais ou de seu escopo fiscal.",
+      "color": "#586bb1",
+      "sourceIds": [
+        "imrs"
+      ],
+      "producer": "TCE-MG; elaboração FJP",
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2019,
+          "value": 46.38,
+          "original": "46.38",
+          "source": "imrs",
+          "variable": "chart_16",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2020,
+          "value": 41.56,
+          "original": "41.56",
+          "source": "imrs",
+          "variable": "chart_16",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2021,
+          "value": 38.0,
+          "original": "38",
+          "source": "imrs",
+          "variable": "chart_16",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2022,
+          "value": 41.64,
+          "original": "41.64",
+          "source": "imrs",
+          "variable": "chart_16",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2023,
+          "value": 45.38,
+          "original": "45.38",
+          "source": "imrs",
+          "variable": "chart_16",
+          "series": "IMRS · série 2019–2024"
+        },
+        {
+          "year": 2024,
+          "value": 48.37,
+          "original": "48.37",
+          "source": "imrs",
+          "variable": "chart_16",
+          "series": "IMRS · série 2019–2024"
+        }
+      ]
+    },
+    {
+      "id": "agua_total",
+      "label": "Atendimento total com água",
+      "theme": "Saneamento",
+      "unit": "%",
+      "decimals": 2,
+      "definition": "Percentual da população total atendida com abastecimento de água na base municipal do Ministério das Cidades.",
+      "note": "A referência é a população total, urbana e rural. SNIS 2022 e SINISA 2024 são trechos separados; a transição impede a comparação automática entre eles.",
+      "color": "#327c9d",
+      "sourceIds": [
+        "snis_ae_2022",
+        "sinisa_agua_2024"
+      ],
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2022,
+          "value": 93.44,
+          "original": "93.44",
+          "source": "snis_ae_2022",
+          "variable": "IN055",
+          "series": "SNIS · 2022 revisado"
+        },
+        {
+          "year": 2024,
+          "value": 88.78,
+          "original": "88.78",
+          "source": "sinisa_agua_2024",
+          "variable": "IAG0001",
+          "series": "SINISA · base municipal 2024"
+        }
+      ],
+      "breakYear": 2023,
+      "breakLabel": "Transição SNIS → SINISA",
+      "breakNote": "Transição do SNIS para o SINISA a partir da referência 2023. Bases e definições devem ser analisadas separadamente; o painel bloqueia variações entre os trechos."
+    },
+    {
+      "id": "esgoto_total",
+      "label": "Atendimento total com esgoto",
+      "theme": "Saneamento",
+      "unit": "%",
+      "decimals": 2,
+      "definition": "Atendimento da população total com esgotamento sanitário (SNIS) e com rede coletora (SINISA), conforme cada sistema.",
+      "note": "Coleta e tratamento são medidas diferentes. A transição entre sistemas é sinalizada e a comparação entre os trechos é bloqueada.",
+      "color": "#327c9d",
+      "sourceIds": [
+        "snis_ae_2022",
+        "sinisa_esgoto_2024"
+      ],
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2022,
+          "value": 88.82,
+          "original": "88.82",
+          "source": "snis_ae_2022",
+          "variable": "IN056",
+          "series": "SNIS · 2022 revisado"
+        },
+        {
+          "year": 2024,
+          "value": 86.3,
+          "original": "86.3",
+          "source": "sinisa_esgoto_2024",
+          "variable": "IES0001",
+          "series": "SINISA · base municipal 2024"
+        }
+      ],
+      "breakYear": 2023,
+      "breakLabel": "Transição SNIS → SINISA",
+      "breakNote": "Transição do SNIS para o SINISA a partir da referência 2023. Bases e definições devem ser analisadas separadamente; o painel bloqueia variações entre os trechos."
+    },
+    {
+      "id": "esgoto_tratado",
+      "label": "Esgoto tratado / esgoto coletado",
+      "theme": "Saneamento",
+      "unit": "%",
+      "decimals": 2,
+      "definition": "Percentual de esgoto tratado em relação ao volume de esgoto coletado, conforme o Ministério das Cidades.",
+      "note": "100% do esgoto coletado tratado não significa que 100% do esgoto gerado pela população seja coletado ou tratado. Transição SNIS/SINISA bloqueia a comparação entre os trechos.",
+      "color": "#327c9d",
+      "sourceIds": [
+        "snis_ae_2022",
+        "sinisa_esgoto_2024"
+      ],
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2022,
+          "value": 100.0,
+          "original": "100.0",
+          "source": "snis_ae_2022",
+          "variable": "IN016",
+          "series": "SNIS · 2022 revisado"
+        },
+        {
+          "year": 2024,
+          "value": 100,
+          "original": "100",
+          "source": "sinisa_esgoto_2024",
+          "variable": "IES2004",
+          "series": "SINISA · base municipal 2024"
+        }
+      ],
+      "breakYear": 2023,
+      "breakLabel": "Transição SNIS → SINISA",
+      "breakNote": "Transição do SNIS para o SINISA a partir da referência 2023. Bases e definições devem ser analisadas separadamente; o painel bloqueia variações entre os trechos."
+    },
+    {
+      "id": "agua_consumo",
+      "label": "Consumo médio de água per capita",
+      "theme": "Saneamento",
+      "unit": "litros por habitante por dia",
+      "decimals": 2,
+      "definition": "Consumo médio per capita de água, em litros por habitante por dia. No SINISA, é o indicador de consumo total médio per capita, distinto do residencial.",
+      "note": "Refere-se à população atendida e ao consumo considerado pelo prestador. A transição SNIS/SINISA bloqueia comparações entre os trechos.",
+      "color": "#327c9d",
+      "sourceIds": [
+        "snis_ae_2022",
+        "sinisa_agua_2024"
+      ],
+      "comparison": "relative",
+      "values": [
+        {
+          "year": 2022,
+          "value": 152.08,
+          "original": "152.08",
+          "source": "snis_ae_2022",
+          "variable": "IN022",
+          "series": "SNIS · 2022 revisado"
+        },
+        {
+          "year": 2024,
+          "value": 185.32,
+          "original": "185.32",
+          "source": "sinisa_agua_2024",
+          "variable": "IAG2006",
+          "series": "SINISA · base municipal 2024"
+        }
+      ],
+      "breakYear": 2023,
+      "breakLabel": "Transição SNIS → SINISA",
+      "breakNote": "Transição do SNIS para o SINISA a partir da referência 2023. Bases e definições devem ser analisadas separadamente; o painel bloqueia variações entre os trechos."
+    },
+    {
+      "id": "residuos_coleta",
+      "label": "Cobertura da coleta domiciliar",
+      "theme": "Saneamento",
+      "unit": "%",
+      "decimals": 2,
+      "definition": "Taxa de cobertura da coleta de resíduos domiciliares (RDO) em relação à população total, conforme o SNIS.",
+      "note": "Dado do órgão gestor municipal SLU. Uma observação de 2022 está disponível nesta base; outros anos não foram preenchidos.",
+      "color": "#327c9d",
+      "sourceIds": [
+        "snis_rs_2022"
+      ],
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2022,
+          "value": 99,
+          "original": "99",
+          "source": "snis_rs_2022",
+          "variable": "IN015",
+          "series": "SNIS · 2022 revisado"
+        }
+      ]
+    },
+    {
+      "id": "residuos_reciclagem",
+      "label": "Recuperação de recicláveis",
+      "theme": "Saneamento",
+      "unit": "%",
+      "decimals": 2,
+      "definition": "Taxa de recuperação de recicláveis em relação à quantidade de resíduos domiciliares (RDO) e públicos (RPU), conforme o SNIS.",
+      "note": "É uma razão de massas de resíduos. Não equivale ao percentual de domicílios atendidos pela coleta seletiva.",
+      "color": "#327c9d",
+      "sourceIds": [
+        "snis_rs_2022"
+      ],
+      "comparison": "points",
+      "values": [
+        {
+          "year": 2022,
+          "value": 1.23,
+          "original": "1.23",
+          "source": "snis_rs_2022",
+          "variable": "IN031",
+          "series": "SNIS · 2022 revisado"
+        }
+      ]
+    },
+    {
+      "id": "igd_m",
+      "label": "IGD-M · gestão do Bolsa Família",
+      "theme": "Assistência social",
+      "unit": "índice de 0 a 1",
+      "decimals": 2,
+      "definition": "Índice de Gestão Descentralizada Municipal do Programa Bolsa Família e do Cadastro Único (IN091). Mede aspectos da qualidade da gestão municipal; varia de 0 a 1.",
+      "note": "Dado mensal: agosto de 2026. Há apenas esse retrato confirmado nesta base; não é média anual e não gera comparação entre anos. A metodologia mudou em janeiro de 2025. O índice não representa o número de beneficiários.",
+      "frequency": "monthly",
+      "sparse": true,
+      "scaleMax": 1,
+      "comparison": "index",
+      "color": "#916b37",
+      "sourceIds": [
+        "mds_igd"
+      ],
+      "values": [
+        {
+          "year": 2026,
+          "period": "2026-08",
+          "periodLabel": "ago/2026",
+          "value": 0.83,
+          "original": "0.83",
+          "source": "mds_igd",
+          "variable": "IN091",
+          "series": "Retrato mensal · metodologia desde jan/2025"
+        }
+      ]
+    },
+    {
+      "id": "idsc_geral",
+      "label": "IDSC-BR · pontuação geral",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 2,
+      "definition": "Pontuação geral de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 56.11,
+          "original": "56.11",
+          "source": "idsc",
+          "variable": "IDSC",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_1",
+      "label": "IDSC · ODS 1 · Erradicação da pobreza",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 1 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 51.3,
+          "original": "51.3",
+          "source": "idsc",
+          "variable": "ODS1",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_2",
+      "label": "IDSC · ODS 2 · Fome zero e agricultura sustentável",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 2 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 51.8,
+          "original": "51.8",
+          "source": "idsc",
+          "variable": "ODS2",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_3",
+      "label": "IDSC · ODS 3 · Saúde e bem-estar",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 3 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 70.4,
+          "original": "70.4",
+          "source": "idsc",
+          "variable": "ODS3",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_4",
+      "label": "IDSC · ODS 4 · Educação de qualidade",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 4 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 63.4,
+          "original": "63.4",
+          "source": "idsc",
+          "variable": "ODS4",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_5",
+      "label": "IDSC · ODS 5 · Igualdade de gênero",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 5 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 45.8,
+          "original": "45.8",
+          "source": "idsc",
+          "variable": "ODS5",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_6",
+      "label": "IDSC · ODS 6 · Água limpa e saneamento",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 6 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 82.2,
+          "original": "82.2",
+          "source": "idsc",
+          "variable": "ODS6",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_7",
+      "label": "IDSC · ODS 7 · Energia limpa e acessível",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 7 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 98.0,
+          "original": "98.0",
+          "source": "idsc",
+          "variable": "ODS7",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_8",
+      "label": "IDSC · ODS 8 · Trabalho decente e crescimento econômico",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 8 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 62.6,
+          "original": "62.6",
+          "source": "idsc",
+          "variable": "ODS8",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_9",
+      "label": "IDSC · ODS 9 · Indústria, inovação e infraestrutura",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 9 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 12.6,
+          "original": "12.6",
+          "source": "idsc",
+          "variable": "ODS9",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_10",
+      "label": "IDSC · ODS 10 · Redução das desigualdades",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 10 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 44.5,
+          "original": "44.5",
+          "source": "idsc",
+          "variable": "ODS10",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_11",
+      "label": "IDSC · ODS 11 · Cidades e comunidades sustentáveis",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 11 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 44.8,
+          "original": "44.8",
+          "source": "idsc",
+          "variable": "ODS11",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_12",
+      "label": "IDSC · ODS 12 · Consumo e produção responsáveis",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 12 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 47.3,
+          "original": "47.3",
+          "source": "idsc",
+          "variable": "ODS12",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_13",
+      "label": "IDSC · ODS 13 · Ação contra a mudança global do clima",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 13 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 68.2,
+          "original": "68.2",
+          "source": "idsc",
+          "variable": "ODS13",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_14",
+      "label": "IDSC · ODS 14 · Vida na água",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 14 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 80.0,
+          "original": "80.0",
+          "source": "idsc",
+          "variable": "ODS14",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_15",
+      "label": "IDSC · ODS 15 · Proteger a vida terrestre",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 15 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 44.8,
+          "original": "44.8",
+          "source": "idsc",
+          "variable": "ODS15",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_16",
+      "label": "IDSC · ODS 16 · Paz, justiça e instituições eficazes",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 16 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 54.6,
+          "original": "54.6",
+          "source": "idsc",
+          "variable": "ODS16",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    },
+    {
+      "id": "idsc_17",
+      "label": "IDSC · ODS 17 · Parcerias e meios de implementação",
+      "theme": "ODS e sustentabilidade",
+      "unit": "pontos de 0 a 100",
+      "decimals": 1,
+      "definition": "Pontuação do ODS 17 de Contagem no Índice de Desenvolvimento Sustentável das Cidades – Brasil, elaborado pelo Instituto Cidades Sustentáveis. A escala vai de 0 a 100; pontuações maiores indicam desempenho mais próximo do ótimo segundo a metodologia do índice.",
+      "note": "Referência: edição 2026, com indicadores componentes de anos diversos. Não significa que todos os dados foram coletados em 2026. Não é uma porcentagem de metas cumpridas. A base contém apenas esta edição confirmada; não é calculada variação entre anos.",
+      "frequency": "edition",
+      "yearKind": "edition",
+      "scaleMax": 100,
+      "sparse": true,
+      "comparison": "index",
+      "sourceIds": [
+        "idsc"
+      ],
+      "color": "#446d99",
+      "values": [
+        {
+          "year": 2026,
+          "periodLabel": "Edição 2026",
+          "value": 31.7,
+          "original": "31.7",
+          "source": "idsc",
+          "variable": "ODS17",
+          "series": "IDSC-BR · edição 2026 · referências diversas"
+        }
+      ]
+    }
+  ],
+  "pendingSources": [
+    {
+      "name": "Sebrae-MG · ISDEL",
+      "url": "https://inteligencia.sebraemg.com.br/isdel",
+      "status": "Valor municipal ainda não confirmado",
+      "note": "A página do Sebrae-MG direciona os painéis para acesso AMEI. A alternativa pública do Observatório Sebrae apresentou erro na consulta de dados. Não foi incluído um valor de Contagem sem ano e edição verificáveis.",
+      "checkedAt": "2026-10-20"
+    }
+  ],
+  "qualityNotes": [
+    "Foram selecionadas séries do IMRS com anos identificados e valores legíveis. Séries com lacunas de ano não resolvidas ou inconsistências aparentes de rótulo/valor ficaram fora desta edição.",
+    "O saneamento foi extraído das planilhas originais do Ministério das Cidades. A revisão de 2022 não fornece indicadores urbanos nessas planilhas; não foram reconstruídos.",
+    "O ISDEL permanece pendente de valor municipal confirmado. A ausência não equivale a zero.",
+    "IDSC-BR: edição do índice e ano de referência dos indicadores componentes são conceitos distintos. A edição 2026 é identificada explicitamente; não foi criada uma série anual a partir dela.",
+    "ECIC: os nove valores do Panorama Brasil de 2020 são apresentados como contexto nacional. Não foram atribuídos ao município de Contagem nem a Minas Gerais."
+  ],
+  "summary": {
+    "metrics": 48,
+    "observations": 205,
+    "themes": 10,
+    "contextObservations": 9
+  },
+  "dashboards": {
+    "ods": {
+      "municipality": "Contagem",
+      "ibgeCode": "3118601",
+      "producer": "Instituto Cidades Sustentáveis · IDSC-BR",
+      "url": "https://idsc.cidadessustentaveis.org.br/#/cidade/3118601",
+      "checkedAt": "2026-10-20",
+      "edition": 2026,
+      "unit": "pontos de 0 a 100",
+      "overall": {
+        "value": 56.11,
+        "original": "56.11",
+        "displayed": "56,11",
+        "edition": 2026
+      },
+      "ranking": {
+        "national": 1061,
+        "nationalTotal": 5570,
+        "state": 195,
+        "stateTotal": 853
+      },
+      "goals": [
+        {
+          "goal": 1,
+          "label": "Erradicação da pobreza",
+          "value": 51.3,
+          "original": "51.3",
+          "displayed": "51,3",
+          "edition": 2026,
+          "unLabel": "Erradicação da pobreza",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/1",
+          "image": "./assets/ods-1.svg"
+        },
+        {
+          "goal": 2,
+          "label": "Fome zero e agricultura sustentável",
+          "value": 51.8,
+          "original": "51.8",
+          "displayed": "51,8",
+          "edition": 2026,
+          "unLabel": "Fome zero e agricultura sustentável",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/2",
+          "image": "./assets/ods-2.svg"
+        },
+        {
+          "goal": 3,
+          "label": "Saúde e bem-estar",
+          "value": 70.4,
+          "original": "70.4",
+          "displayed": "70,4",
+          "edition": 2026,
+          "unLabel": "Saúde e Bem-Estar",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/3",
+          "image": "./assets/ods-3.svg"
+        },
+        {
+          "goal": 4,
+          "label": "Educação de qualidade",
+          "value": 63.4,
+          "original": "63.4",
+          "displayed": "63,4",
+          "edition": 2026,
+          "unLabel": "Educação de qualidade",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/4",
+          "image": "./assets/ods-4.svg"
+        },
+        {
+          "goal": 5,
+          "label": "Igualdade de gênero",
+          "value": 45.8,
+          "original": "45.8",
+          "displayed": "45,8",
+          "edition": 2026,
+          "unLabel": "Igualdade de gênero",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/5",
+          "image": "./assets/ods-5.svg"
+        },
+        {
+          "goal": 6,
+          "label": "Água limpa e saneamento",
+          "value": 82.2,
+          "original": "82.2",
+          "displayed": "82,2",
+          "edition": 2026,
+          "unLabel": "Água potável e saneamento",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/6",
+          "image": "./assets/ods-6.svg"
+        },
+        {
+          "goal": 7,
+          "label": "Energia limpa e acessível",
+          "value": 98.0,
+          "original": "98.0",
+          "displayed": "98,0",
+          "edition": 2026,
+          "unLabel": "Energia limpa e acessível",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/7",
+          "image": "./assets/ods-7.svg"
+        },
+        {
+          "goal": 8,
+          "label": "Trabalho decente e crescimento econômico",
+          "value": 62.6,
+          "original": "62.6",
+          "displayed": "62,6",
+          "edition": 2026,
+          "unLabel": "Trabalho decente e crescimento econômico",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/8",
+          "image": "./assets/ods-8.svg"
+        },
+        {
+          "goal": 9,
+          "label": "Indústria, inovação e infraestrutura",
+          "value": 12.6,
+          "original": "12.6",
+          "displayed": "12,6",
+          "edition": 2026,
+          "unLabel": "Indústria, inovação e infraestrutura",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/9",
+          "image": "./assets/ods-9.svg"
+        },
+        {
+          "goal": 10,
+          "label": "Redução das desigualdades",
+          "value": 44.5,
+          "original": "44.5",
+          "displayed": "44,5",
+          "edition": 2026,
+          "unLabel": "Redução das desigualdades",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/10",
+          "image": "./assets/ods-10.svg"
+        },
+        {
+          "goal": 11,
+          "label": "Cidades e comunidades sustentáveis",
+          "value": 44.8,
+          "original": "44.8",
+          "displayed": "44,8",
+          "edition": 2026,
+          "unLabel": "Cidades e comunidades sustentáveis",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/11",
+          "image": "./assets/ods-11.svg"
+        },
+        {
+          "goal": 12,
+          "label": "Consumo e produção responsáveis",
+          "value": 47.3,
+          "original": "47.3",
+          "displayed": "47,3",
+          "edition": 2026,
+          "unLabel": "Consumo e produção responsáveis",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/12",
+          "image": "./assets/ods-12.svg"
+        },
+        {
+          "goal": 13,
+          "label": "Ação contra a mudança global do clima",
+          "value": 68.2,
+          "original": "68.2",
+          "displayed": "68,2",
+          "edition": 2026,
+          "unLabel": "Ação contra a mudança global do clima",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/13",
+          "image": "./assets/ods-13.svg"
+        },
+        {
+          "goal": 14,
+          "label": "Vida na água",
+          "value": 80.0,
+          "original": "80.0",
+          "displayed": "80,0",
+          "edition": 2026,
+          "unLabel": "Vida na água",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/14",
+          "image": "./assets/ods-14.svg"
+        },
+        {
+          "goal": 15,
+          "label": "Proteger a vida terrestre",
+          "value": 44.8,
+          "original": "44.8",
+          "displayed": "44,8",
+          "edition": 2026,
+          "unLabel": "Vida terrestre",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/15",
+          "image": "./assets/ods-15.svg"
+        },
+        {
+          "goal": 16,
+          "label": "Paz, justiça e instituições eficazes",
+          "value": 54.6,
+          "original": "54.6",
+          "displayed": "54,6",
+          "edition": 2026,
+          "unLabel": "Paz, Justiça e Instituições Eficazes",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/16",
+          "image": "./assets/ods-16.svg"
+        },
+        {
+          "goal": 17,
+          "label": "Parcerias e meios de implementação",
+          "value": 31.7,
+          "original": "31.7",
+          "displayed": "31,7",
+          "edition": 2026,
+          "unLabel": "Parcerias e meios de implementação",
+          "unUrl": "https://brasil.un.org/pt-br/sdgs/17",
+          "image": "./assets/ods-17.svg"
+        }
+      ],
+      "source": "idsc"
+    },
+    "culture": {
+      "producer": "Observatório Fundação Itaú · Itaú Cultural",
+      "requestedUrl": "https://fundacaoitau.org.br/observatorio/dados/paineis-dados/dados-painel-ecic",
+      "linkedUrl": "https://www.itaucultural.org.br/observatorio/paineldedados/",
+      "resolvedUrl": "https://paineldedados.i-nove.org/",
+      "checkedAt": "2026-10-20",
+      "referenceYear": 2020,
+      "scope": "Contexto Brasil. Nenhum dos valores é atribuído a Contagem ou a Minas Gerais.",
+      "method": "Valores publicados no quadro Panorama Brasil da página pública do painel. A participação da ECIC no PIB brasileiro e as participações dos agrupamentos e regiões possuem denominadores diferentes.",
+      "upstreamSources": "PNAD Contínua, RAIS, PAS, PIA-Empresa, SalicNet, Tabelas de Recursos e Usos (TRU) e Ecad, conforme o quadro da fonte.",
+      "htmlSha256": "224f55217293126b2852dea56a51eafab956300379b630ef42a7afc01bef26dc",
+      "records": [
+        {
+          "id": "pib_share",
+          "label": "ECIC no PIB brasileiro",
+          "group": "participacao",
+          "value": 3.11,
+          "original": "3.11",
+          "year": 2020,
+          "unit": "% do PIB brasileiro",
+          "territory": "Brasil"
+        },
+        {
+          "id": "consumo",
+          "label": "Consumo",
+          "group": "agrupamentos",
+          "value": 47.71,
+          "original": "47.71",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Brasil"
+        },
+        {
+          "id": "cultura",
+          "label": "Cultura",
+          "group": "agrupamentos",
+          "value": 2.16,
+          "original": "2.16",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Brasil"
+        },
+        {
+          "id": "tecnologia",
+          "label": "Tecnologia",
+          "group": "agrupamentos",
+          "value": 50.13,
+          "original": "50.13",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Brasil"
+        },
+        {
+          "id": "norte",
+          "label": "Norte",
+          "group": "regioes",
+          "value": 0.96,
+          "original": "0.96",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Norte",
+          "scope": "Participação da região no total nacional; não é um indicador municipal."
+        },
+        {
+          "id": "nordeste",
+          "label": "Nordeste",
+          "group": "regioes",
+          "value": 3.14,
+          "original": "3.14",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Nordeste",
+          "scope": "Participação da região no total nacional; não é um indicador municipal."
+        },
+        {
+          "id": "sul",
+          "label": "Sul",
+          "group": "regioes",
+          "value": 20.48,
+          "original": "20.48",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Sul",
+          "scope": "Participação da região no total nacional; não é um indicador municipal."
+        },
+        {
+          "id": "sudeste",
+          "label": "Sudeste",
+          "group": "regioes",
+          "value": 71.46,
+          "original": "71.46",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Sudeste",
+          "scope": "Participação da região no total nacional; não é um indicador municipal."
+        },
+        {
+          "id": "centro_oeste",
+          "label": "Centro-Oeste",
+          "group": "regioes",
+          "value": 3.96,
+          "original": "3.96",
+          "year": 2020,
+          "unit": "% do PIB da ECIC no Brasil",
+          "territory": "Centro-Oeste",
+          "scope": "Participação da região no total nacional; não é um indicador municipal."
+        }
+      ],
+      "municipalStatus": "A consulta da base municipal de orçamento cultural retornou erro. Não há valor municipal confirmado nesta ampliação.",
+      "source": "itau_ecic"
+    }
+  }
+}
