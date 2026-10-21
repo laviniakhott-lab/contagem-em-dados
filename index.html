@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contagem em Dados</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0057b8,#00a859);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
+
+.section-title{
+    margin:30px 0 15px;
+    color:#004a99;
+    border-left:6px solid #00a859;
+    padding-left:12px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    padding:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#0057b8;
+}
+
+.card p{
+    margin-bottom:15px;
+    font-size:14px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#0057b8;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#003f87;
+}
+
+footer{
+    margin-top:40px;
+    background:#002b55;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📊 Contagem em Dados</h1>
+    <p>Observatório do Trabalho, Emprego e Desenvolvimento de Contagem</p>
+</header>
+
+<div class="container">
+
+    <h2 class="section-title">Mercado de Trabalho</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>SINE</h3>
+            <p>Informações sobre o Sistema Nacional de Emprego.</p>
+            <a class="btn" href="https://portalfat.trabalho.gov.br/wp-content/uploads/2026/06/MIV-SINE-E-CASA-NO-TRABALHADOR-MTE-final-1.pdf" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Novo CAGED</h3>
+            <p>Dados oficiais do mercado de trabalho formal.</p>
+            <a class="btn" href="https://caged.maisemprego.mte.gov.br/portalcaged/paginas/home/home.xhtml" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Saúde e Segurança do Trabalho</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>SmartLab SST</h3>
+            <p>Indicadores de saúde e segurança do trabalho.</p>
+            <a class="btn" href="https://smartlabbr.org/sst/localidade/0?dimensao=frequenciaAfastamentos" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>DATASUS</h3>
+            <p>Informações e estatísticas de saúde pública.</p>
+            <a class="btn" href="https://datasus.saude.gov.br/informacoes-de-saude-tabnet/" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Economia e Desenvolvimento</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Fundação João Pinheiro</h3>
+            <p>Indicadores municipais de Minas Gerais.</p>
+            <a class="btn" href="https://robin-hood.fjp.mg.gov.br/municipios" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Power BI</h3>
+            <p>Painéis interativos e indicadores.</p>
+            <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiZmVjNzg2ZWEtY2JmYS00ZmUyLWIxNDYtYzJjNDg2YmQzNTFiIiwidCI6IjNlYzkyOTY5LTVhNTEtNGYxOC04YWM5LWVmOThmYmFmYTk3OCJ9" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>ComexStat</h3>
+            <p>Exportações e importações municipais.</p>
+            <a class="btn" href="https://comexstat.mdic.gov.br/pt/municipio" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>IBGE</h3>
+            <p>Cadastro Central de Empresas.</p>
+            <a class="btn" href="https://www.ibge.gov.br/estatisticas/economicas/industria/9016-estatisticas-do-cadastro-central-de-empresas" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Assistência Social</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>MDS</h3>
+            <p>Painéis e dados sociais do Ministério do Desenvolvimento Social.</p>
+            <a class="btn" href="https://aplicacoes.mds.gov.br/sagi-paineis/analise_dados_abertos/" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Sustentabilidade e Meio Ambiente</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>MapBiomas</h3>
+            <p>Uso da terra e cobertura vegetal.</p>
+            <a class="btn" href="https://brasil.mapbiomas.org/" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>IDSC</h3>
+            <p>Índice de Desenvolvimento Sustentável das Cidades.</p>
+            <a class="btn" href="https://idsc.cidadessustentaveis.org.br/" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Educação</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Observatório Itaú</h3>
+            <p>Indicadores educacionais e desenvolvimento social.</p>
+            <a class="btn" href="https://fundacaoitau.org.br/observatorio/dados/paineis-dados/dados-painel-ecic" target="_blank">
+                Acessar
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Contagem em Dados | laviniakhott-lab
+</footer>
+
+</body>
+</html>
