@@ -43,7 +43,7 @@ const W=Math.max(290,$('#chart').clientWidth),
       h=H-T-B;
  let max=Math.max(...pts.map(p=>p.value));const scale=Math.pow(10,Math.floor(Math.log10(max)));const top=m.scaleMax??(max>0?Math.ceil(max/scale*1.12)*scale:1);
  const x=y=>allYears.length===1?L+w/2:L+(y-state.start)/(state.end-state.start)*w;
- const yy=v=>T+hv/top*h;
+const yy=v=>T+h-(v/top)*h;
  const tick=v=>m.scaleMax===1?nf(v,2):m.id==='pib'?nf(v/1e6,1)+' bi':v>=1e6?nf(v/1e6,1)+' mi':v>=1000?nf(v/1000,Number.isInteger(v/1000)?0:1)+' mil':nf(v,v<10?1:0);
  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="svgtitle svgdesc"><title id="svgtitle">${esc(m.label)} em Contagem, ${state.start} a ${state.end}</title><desc id="svgdesc">${pts.map(p=>`${p.periodLabel??p.year}: ${full(m,p.value)} ${m.unit}`).join('; ')}. Anos sem observação não são necessários. Valores exatos também estão na tabela.</desc>`;
  for(let i=0;i<=4;i++){const v=top*i/4,y=yy(v);s+=`<line x1="${L}" x2="${WR}" y1="${y}" y2="${y}" stroke="#e7ebe3" ${i?'stroke-dasharray="3 4"':''}/><text x="${L-12}" y="${y+3}" text-anchor="end">${tick(v)}</text>`;}
