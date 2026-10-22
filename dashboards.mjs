@@ -6,7 +6,21 @@ export function scoreLevel(v){
  return {key:'very_low',label:'Muito baixo',color:'#a74a55'};
 }
 export function initDashboards(D,onSelectMetric=()=>{}){
- const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&','<':'<','>':'>','"':'"',"'":'''}[c])),nf=(v,n=1)=>new Intl.NumberFormat('pt-BR',{minimumFractionDigits:n,maximumFractionDigits:n}).format(v);
+ const $ = s => document.querySelector(s);
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;'
+}[c]));
+
+const nf = (v,n=1) =>
+  new Intl.NumberFormat('pt-BR',{
+    minimumFractionDigits:n,
+    maximumFractionDigits:n
+  }).format(v);nf=(v,n=1)=>new Intl.NumberFormat('pt-BR',{minimumFractionDigits:n,maximumFractionDigits:n}).format(v);
  const ods=D.dashboards.ods,culture=D.dashboards.culture;
  let selectedGoal=1;
  const exportRows=(name,rows)=>{const csv='\ufeff'+rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(';')).join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);$('#toast').textContent='CSV exportado com território, referência, unidade e fonte.';$('#toast').hidden=false;setTimeout(()=>$('#toast').hidden=true,3500);};
