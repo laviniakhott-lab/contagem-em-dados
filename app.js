@@ -33,7 +33,14 @@ function renderChart(){
  $('#chart-source').innerHTML=`<span>Fonte: ${sourceIds.length?sourceIds.map(id=>`<a href="${esc(D.sources[id].url)}" target="_blank" rel="noopener noreferrer">${esc(D.sources[id].table)} â†—</a>`).join(' · '):'Sem observación no período'}</span><span>Consulta: 20/10/2026</span>`;
  $('#chart-legend').innerHTML=`<span class="legend-item"><i class="legend-dot" style="background:${m.color}"></i>${m.breakYear?'Desde '+m.breakYear:'Contagem'}</span>${m.breakYear?`<span class="legend-item"><i class="legend-dash"></i>Até ${m.breakYear-1} Â· série anterior</span>`:''}<span class="point-readout" id="readout">${pts.length?'Toque ou foque um ponto para conferir':''}</span>`;
  if(!pts.length){$('#chart').innerHTML='<div class="empty"><strong>Sem observação neste período</strong><span>Amplie os anos ou escolha outro indicador.<br>Nenhum valor foi preenchido ou estimado.</span></div>';return;}
- const W=Math.max(290,$('#chart').clientWidth),H=$('#chart').clientHeight||260,L=59,R=20,T=21,B=35,w=WLR,h=HTB;
+const W=Math.max(290,$('#chart').clientWidth),
+      H=$('#chart').clientHeight||260,
+      L=59,
+      R=20,
+      T=21,
+      B=35,
+      w=W-L-R,
+      h=H-T-B;
  let max=Math.max(...pts.map(p=>p.value));const scale=Math.pow(10,Math.floor(Math.log10(max)));const top=m.scaleMax??(max>0?Math.ceil(max/scale*1.12)*scale:1);
  const x=y=>allYears.length===1?L+w/2:L+(y-state.start)/(state.end-state.start)*w;
  const yy=v=>T+hv/top*h;
