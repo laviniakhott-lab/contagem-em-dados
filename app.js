@@ -45,7 +45,7 @@ function renderChart(){
  for(const y of labelYears)s+=`<text x="${x(y)}" y="${H-10}" text-anchor="middle">${y}</text>`;
  if(m.breakYear&&state.start<m.breakYear&&state.end>=m.breakYear){const bx=x(m.breakYear-.5);s+=`<line x1="${bx}" x2="${bx}" y1="${T}" y2="${T+h}" stroke="#b7ac97" stroke-dasharray="4 4"/><text x="${bx+7}" y="${T+4}" style="fill:#9d7847;font-size:9px">${esc(m.breakLabel??'Quebra de série')}</text>`;}
  if(type==='line'){
-  let segmentos = []; for (const p of pts) { let último = segmentos.at(-1), anterior = último?.at(-1); se (!anterior || p.ano - anterior.ano !== 1 || (m.breakYear && anterior.ano < m.breakYear && p.ano >= m.breakYear)) segmentos.push([p]); else ultimo.push(p); }
+  let segmentos = []; for (const p of pts) { let ultimo = segmentos.at(-1), anterior = ultimo?.at(-1); if (!anterior || p.ano - anterior.ano !== 1 || (m.breakYear && anterior.ano < m.breakYear && p.ano >= m.breakYear)) segmentos.push([p]); else ultimo.push(p); }
   for(const seg of segments){const old=m.breakYear&&seg[0].year<m.breakYear;const path=seg.map((p,i)=>`${i?'L':'M'}${x(p.year)},${yy(p.value)}`).join(' ');if(seg.length>1)s+=`<path d="${path} L${x(seg.at(-1).year)},${T+h} L${x(seg[0].year)},${T+h}Z" fill="${m.color}" opacity=".045"/><path d="${path}" fill="none" stroke="${m.color}" stroke-width="2.7" ${old?'stroke-dasharray="6 5"':''}/>`;}
  }
  const bw=Math.min(43,w/(allYears.length+2)*.63);
