@@ -5,7 +5,7 @@ export function selectEvents(events, period, category, now = Date.now()) {
 }
 async function init() {
  try {
-  const response = await fetch('/events.json', {cache:'no-cache'});
+  const response = await fetch('./events.json', {cache:'no-cache'});
   if (!response.ok) throw new Error('Agenda indisponÃ­vel');
   const data = await response.json();
   const render = () => {
