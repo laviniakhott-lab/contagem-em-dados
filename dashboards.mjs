@@ -16,6 +16,18 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({
   "'": '&#39;'
 }[c]));
 
+const nf = (v,n=1) => new Intl.NumberFormat('pt-BR',{
+  minimumFractionDigits:n,
+  maximumFractionDigits:n
+}).format(v);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;'
+}[c]));
+
 const nf = (v,n=1) =>
   new Intl.NumberFormat('pt-BR',{
     minimumFractionDigits:n,
