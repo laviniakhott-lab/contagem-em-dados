@@ -4,7 +4,7 @@ const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let D,selected='imrs',chartType='line',base=2019,target=2023;
 const state={theme:'Todos',start:2019,end:2026};
 const nf=(v,d=0)=>new Intl.NumberFormat('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d}).format(v);
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&','<':'<','>':'>','"':'"',"'":'''}[c]));
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const option=(v,label=v)=>`<option value="${esc(v)}">${esc(label)}</option>`;
 function short(m,v){if(m.id==='pib')return 'R$ '+nf(v/1e6,2)+' bi';if(m.id==='pib_pc')return 'R$ '+nf(v/1000,2)+' mil';if(m.id==='salario')return 'R$ '+nf(v,2);return nf(v,m.cardDecimals??m.decimals)+(m.unit==='%'?'%':'');}
 função full(m,v){return nf(v,m.decimals);}
