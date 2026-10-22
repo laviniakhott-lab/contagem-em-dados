@@ -7,17 +7,17 @@ const nf=(v,d=0)=>new Intl.NumberFormat('pt-BR',{minimumFractionDigits:d,maximum
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const option=(v,label=v)=>`<option value="${esc(v)}">${esc(label)}</option>`;
 function short(m,v){if(m.id==='pib')return 'R$ '+nf(v/1e6,2)+' bi';if(m.id==='pib_pc')return 'R$ '+nf(v/1000,2)+' mil';if(m.id==='salario')return 'R$ '+nf(v,2);return nf(v,m.cardDecimals??m.decimals)+(m.unit==='%'?'%':'');}
-função full(m,v){return nf(v,m.decimals);}
+function full(m,v){return nf(v,m.decimals);}
 const mget=()=>D.metrics.find(m=>m.id===selected);
 const filtered=()=>D.metrics.filter(m=>state.theme==='Todos'||m.theme===state.theme);
-função selectMetric(id){selected=id;resetComparison();render();}
-função resetComparison(){let pts=within(mget(),state.start,state.end);if(mget().breakYear&&pts.some(p=>p.year>=mget().breakYear))pts=pts.filter(p=>p.year>=mget().breakYear);base=pts[0]?.year??state.start;target=pts.at(-1)?.year??state.end;}
+function selectMetric(id){selected=id;resetComparison();render();}
+function resetComparison(){let pts=within(mget(),state.start,state.end);if(mget().breakYear&&pts.some(p=>p.year>=mget().breakYear))pts=pts.filter(p=>p.year>=mget().breakYear);base=pts[0]?.year??state.start;target=pts.at(-1)?.year??state.end;}
 function handleFilters(){state.theme=$('#theme').value;state.start=Number($('#start').value);state.end=Number($('#end').value);if(!filtered().some(m=>m.id===selected))selected=filtered()[0].id;resetComparison();render();}
 function cards(){let ms=filtered().slice(0,4);if(state.theme==='Todos')ms=['imrs','populacao','idsc_geral','agua_total'].map(id=>D.metrics.find(m=>m.id===id));$('#cards').classList.toggle('compact',state.theme!=='Todos');$('#cards').innerHTML=ms.map(m=>{const p=within(m,state.start,state.end).at(-1);return `<button class="card ${selected===m.id?'selected':''}" data-metric="${m.id}" aria-pressed="${selected===m.id}"><span class="card-top"><span>${m.theme}</span><span class="tag">${p?(p.periodLabel??p.year):'Sem dado'}</span></span><span class="card-label">${m.label}</span><span class="card-value">${p?short(m,p.value):'â--'}</span><span class="card-unit">${p?(m.id==='pib'?'bilhÃµes de R$ Â· preços correntes':m.id==='pib_pc'?'mil R$ por habitante':m.unit):'Sem valor no perÃodo selecionado'}</span><span class="card-source">${p?D.sources[p.source].name:'Consulte o indicador e sua fonte'}</span><span class="card-arrow" aria-hidden="true">â†—</span></button>`;}).join('');$$('[data-metric]').forEach(b=>b.onclick=()=>selectMetric(b.dataset.metric));}
 function sourceFor(m,y){const p=observation(m,y);if(p)return D.sources[p.source];if(m.breakYear){const sample=m.values.find(p=>(p.year<m.breakYear)===(y<m.breakYear));if(sample)return D.sources[sample.source];}return D.sources[m.sourceIds.at(-1)];}
 function searchCatalog(){const q=$('#search').value.trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();const results=$('#search-results');results.hidden=!q;if(!q)return;const matches=D.metrics.filter(m=>(m.label+' '+m.theme+' '+m.definition).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes(q));results.innerHTML=matches.length?matches.map(m=>`<button type="button" data-result="${m.id}"><span>${esc(m.label)}</span><small>${esc(m.theme)} · ${esc(m.unit)}</small></button>`).join(''):'<p>Nenhum indicador encontrado. Tente outro termo.</p>';results.querySelectorAll('[data-result]').forEach(b=>b.onclick=()=>{state.theme='Todos';$('#theme').value='Todos';$('#search').value='';results.hidden=true;selectMetric(b.dataset.result);});}
 
-função renderChart(){
+function renderChart(){
  const m=mget(),pts=within(m,state.start,state.end),allYears=years(state.start,state.end);
  $('#chart-subtitle').textContent=`${m.unit} · ${m.frequency==='edition'?(m.values[0].periodLabel+' · componentes de anos diversos'):m.frequency==='monthly'?(m.values[0].periodLabel+' · retrato mensal, sem mé©dia anual'):state.start+'â€–'+state.end}${m.money?' · preç§os correntes':''}`;
  $('#line').disabled=!!m.sparse;const type=m.sparse?'bar':chartType;
@@ -39,7 +39,7 @@ função renderChart(){
  for(const y of labelYears)s+=`<text x="${x(y)}" y="${H-10}" text-anchor="middle">${y}</text>`;
  if(m.breakYear&&state.start<m.breakYear&&state.end>=m.breakYear){const bx=x(m.breakYear-.5);s+=`<line x1="${bx}" x2="${bx}" y1="${T}" y2="${T+h}" stroke="#b7ac97" stroke-dasharray="4 4"/><text x="${bx+7}" y="${T+4}" style="fill:#9d7847;font-size:9px">${esc(m.breakLabel??'Quebra de série')}</text>`;}
  if(type==='line'){
-  seja segmentos = []; para (const p de pts) { seja último = segmentos.em(-1), anterior = último?.em(-1); se (!anterior || p.ano - anterior.ano !== 1 || (m.breakYear && anterior.ano < m.breakYear && p.ano >= m.breakYear)) segmentos.push([p]); senão último.push(p); }
+  let segmentos = []; for (const p of pts) { let último = segmentos.at(-1), anterior = último?.at(-1); se (!anterior || p.ano - anterior.ano !== 1 || (m.breakYear && anterior.ano < m.breakYear && p.ano >= m.breakYear)) segmentos.push([p]); else ultimo.push(p); }
   for(const seg of segments){const old=m.breakYear&&seg[0].year<m.breakYear;const path=seg.map((p,i)=>`${i?'L':'M'}${x(p.year)},${yy(p.value)}`).join(' ');if(seg.length>1)s+=`<path d="${path} L${x(seg.at(-1).year)},${T+h} L${x(seg[0].year)},${T+h}Z" fill="${m.color}" opacity=".045"/><path d="${path}" fill="none" stroke="${m.color}" stroke-width="2.7" ${old?'stroke-dasharray="6 5"':''}/>`;}
  }
  const bw=Math.min(43,w/(allYears.length+2)*.63);
