@@ -70,7 +70,7 @@ for (const p of pts) {
     ultimo.push(p);
   }
 }
-  for(const seg of segments){const old=m.breakYear&&seg[0].year<m.breakYear;const path=seg.map((p,i)=>`${i?'L':'M'}${x(p.year)},${yy(p.value)}`).join(' ');if(seg.length>1)s+=`<path d="${path} L${x(seg.at(-1).year)},${T+h} L${x(seg[0].year)},${T+h}Z" fill="${m.color}" opacity=".045"/><path d="${path}" fill="none" stroke="${m.color}" stroke-width="2.7" ${old?'stroke-dasharray="6 5"':''}/>`;}
+  for(const seg of segmentos){const old=m.breakYear&&seg[0].year<m.breakYear;const path=seg.map((p,i)=>`${i?'L':'M'}${x(p.year)},${yy(p.value)}`).join(' ');if(seg.length>1)s+=`<path d="${path} L${x(seg.at(-1).year)},${T+h} L${x(seg[0].year)},${T+h}Z" fill="${m.color}" opacity=".045"/><path d="${path}" fill="none" stroke="${m.color}" stroke-width="2.7" ${old?'stroke-dasharray="6 5"':''}/>`;}
  }
  const bw=Math.min(43,w/(allYears.length+2)*.63);
  for(const p of pts){const old=m.breakYear&&p.year<m.breakYear,title=`${p.periodLabel??p.year} · ${full(m,p.value)} ${m.unit}`;s+=type==='bar'?`<rect class="data-point" data-year="${p.year}" tabindex="0" role="img" aria-label="${esc(title)}" x="${x(p.year)-bw/2}" y="${yy(p.value)}" width="${bw}" height="${T+h-yy(p.value)}" rx="3" fill="${m.color}" opacity="${old?.42:.87}"><title>${esc(title)}</title></rect>`:`<circle class="data-point" data-year="${p.year}" tabindex="0" role="img" aria-label="${esc(title)}" cx="${x(p.year)}" cy="${yy(p.value)}" r="4.5" stroke="${m.color}" stroke-width="2" fill="white"><title>${esc(title)}</title></circle>`;}
